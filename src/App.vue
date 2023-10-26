@@ -1,7 +1,11 @@
 <script setup></script>
 
 <template>
-  <div></div>
+  <div class="test">Hello World</div>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+.test {
+  background-color: red;
+}
+</style>
