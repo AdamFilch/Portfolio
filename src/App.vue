@@ -1,11 +1,9 @@
-<script setup></script>
+<script setup>
+import HeroLanding from "./components/HeroLanding.vue";
+</script>
 
 <template>
-  <div class="test">Hello World</div>
+  <HeroLanding />
 </template>
 
-<style lang="scss">
-.test {
-  background-color: red;
-}
-</style>
+<style lang="scss"></style>
