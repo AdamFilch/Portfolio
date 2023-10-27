@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.0",
+    "@vueuse/core": "^10.5.0",
     "motion": "^10.16.4",
     "vue": "^3.3.4"
   },
