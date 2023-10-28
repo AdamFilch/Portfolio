@@ -23,30 +23,30 @@
         <li>📝 Download my CV <a href id="DownloadCV">Here</a>!</li> -->
       </ul>
       <div class="btns">
-        <div class="reachout-download">
+        <!-- <div class="reachout-download">
           <button class="btn">👔 Reach out to me</button>
           <button class="btn">📝 Download my CV</button>
-        </div>
+        </div> -->
         <div class="social-btns">
           <button class="social-btn" id="LinkedIn">
             <Icon
               icon="bxl:linkedin-square"
               style="font-size: 35px"
-              class="linkedin-logo"
+              class="sbtns linkedin-logo"
             />
           </button>
           <button class="social-btn" id="GitHub">
             <Icon
               icon="bxl:github"
               style="font-size: 35px"
-              class="github-logo"
+              class="sbtns github-logo"
             />
           </button>
           <button class="social-btn" id="Instagram">
             <Icon
               icon="bxl:instagram"
               style="font-size: 35px"
-              class="instagram-logo"
+              class="sbtns instagram-logo"
             />
           </button>
         </div>
@@ -86,6 +86,7 @@ import { Icon } from "@iconify/vue";
 
 .contacts ul {
   margin-left: 30px;
+
   font-size: 1em;
 }
 
@@ -111,7 +112,8 @@ import { Icon } from "@iconify/vue";
   border: none;
   transition:
     width 0.2s,
-    height 0.2s;
+    height 0.2s,
+    box-shadow 0.2s;
   font-size: 0.2;
   font-weight: 600;
 }
@@ -121,6 +123,7 @@ import { Icon } from "@iconify/vue";
   width: 170px;
   background: #fff;
   color: #121212;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 
 .social-btn {
@@ -142,23 +145,44 @@ import { Icon } from "@iconify/vue";
 }
 
 .social-btns {
-  align-items: center;
-  max-height: 40px;
+  justify-content: center;
+  align-items: start;
   display: flex;
-  gap: 0 5px;
+  width: 160px;
+
+  gap: 0 10px;
   margin-left: 20px;
 }
 
 .github-logo:hover {
-  color: rgb(113, 113, 113);
-  transition: color 0.2s;
+  color: rgb(139, 139, 139);
+  width: 49px;
+  height: 49px;
+  transition:
+    color 0.3s,
+    height 0.3s,
+    width 0.3s;
 }
 .linkedin-logo:hover {
   color: #0a66c2;
-  transition: color 0.2s;
+  width: 49px;
+  height: 49px;
+  transition:
+    color 0.3s,
+    height 0.3s,
+    width 0.3s;
 }
 .instagram-logo:hover {
   color: #e1306c;
-  transition: color 0.2s;
+  width: 49px;
+  height: 49px;
+  transition:
+    color 0.3s,
+    height 0.3s,
+    width 0.3s;
+}
+
+.sbtns {
+  color: #fff;
 }
 </style>
