@@ -22,19 +22,42 @@
         <!-- <li>👔 Reach out to me <a href id="ContactHere">Here</a>!</li>
         <li>📝 Download my CV <a href id="DownloadCV">Here</a>!</li> -->
       </ul>
-      <div class="reachout-download">
-        <button class="btn"><span>👔 Reach out to me</span></button>
-        <button class="btn"><span>📝 Download my CV</span></button>
+      <div class="btns">
+        <div class="reachout-download">
+          <button class="btn">👔 Reach out to me</button>
+          <button class="btn">📝 Download my CV</button>
+        </div>
+        <div class="social-btns">
+          <button class="social-btn" id="LinkedIn">
+            <Icon
+              icon="bxl:linkedin-square"
+              style="font-size: 35px"
+              class="linkedin-logo"
+            />
+          </button>
+          <button class="social-btn" id="GitHub">
+            <Icon
+              icon="bxl:github"
+              style="font-size: 35px"
+              class="github-logo"
+            />
+          </button>
+          <button class="social-btn" id="Instagram">
+            <Icon
+              icon="bxl:instagram"
+              style="font-size: 35px"
+              class="instagram-logo"
+            />
+          </button>
+        </div>
       </div>
-
-      <button id="LinkedIn"></button>
-      <button id="GitHub"></button>
-      <button id="Instagram"></button>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { Icon } from "@iconify/vue";
+</script>
 
 <style lang="scss" scoped>
 .intro {
@@ -44,34 +67,98 @@
   font-size: 24px;
 }
 .intro h2 {
-  font-size: 46px;
+  font-size: 45px;
 }
 
 .intro p {
   text-align: left;
-  font-size: 1.2em;
+  font-size: 1.1em;
   width: 600px;
-  margin-top: 1em;
+  margin-top: 20px;
 }
 .hero {
   display: flex;
-  width: 650px;
+  width: 600px;
 
   flex-direction: column;
   margin: 0 auto;
 }
 
-.contacts {
+.contacts ul {
   margin-left: 30px;
+  font-size: 1em;
 }
 
 .reachout-download {
   display: flex;
   gap: 0 20px;
+
+  max-height: 40px;
+  max-width: 320px;
+  justify-content: center;
+  align-items: center;
 }
 
+.btns {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
 .btn {
-  height: 30px;
-  widows: 100px;
+  height: 40px;
+  width: 150px;
+  border-radius: 100pt;
+  border: none;
+  transition:
+    width 0.2s,
+    height 0.2s;
+  font-size: 0.2;
+  font-weight: 600;
+}
+
+.btn:hover {
+  height: 45px;
+  width: 170px;
+  background: #fff;
+  color: #121212;
+}
+
+.social-btn {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  transition:
+    width 0.2s,
+    height 0.2s;
+}
+
+.social-btn:hover {
+  background-color: transparent;
+  border: none;
+
+  width: 45px;
+  height: 45px;
+}
+
+.social-btns {
+  align-items: center;
+  max-height: 40px;
+  display: flex;
+  gap: 0 5px;
+  margin-left: 20px;
+}
+
+.github-logo:hover {
+  color: rgb(113, 113, 113);
+  transition: color 0.2s;
+}
+.linkedin-logo:hover {
+  color: #0a66c2;
+  transition: color 0.2s;
+}
+.instagram-logo:hover {
+  color: #e1306c;
+  transition: color 0.2s;
 }
 </style>
