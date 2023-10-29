@@ -1,6 +1,7 @@
 <script setup>
 import HeroLanding from "./components/HeroLanding.vue";
 import FloatingNavBar from "./components/FloatingNavBar.vue";
+import AboutMe from "./components/AboutMe.vue";
 </script>
 
 <template>
@@ -12,7 +13,9 @@ import FloatingNavBar from "./components/FloatingNavBar.vue";
       <HeroLanding />
     </div>
 
-    <div class="body"></div>
+    <div class="body">
+      <AboutMe />
+    </div>
     <div class="footer"></div>
   </div>
 </template>

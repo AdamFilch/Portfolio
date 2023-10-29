@@ -68,17 +68,17 @@ import { Icon } from "@iconify/vue";
   margin-bottom: 15px;
 }
 .intro h2 {
-  font-size: 40px;
+  font-size: 44px;
 }
 
 .intro p {
   text-align: left;
   font-size: 18px;
-  width: 500px;
+
   margin-top: 30px;
 }
 .hero {
-  width: 500px;
+  width: 600px;
   margin: auto;
 }
 

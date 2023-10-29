@@ -21,10 +21,7 @@
       </button>
 
       <button class="nav-btn edge-btn" id="Contact Me">
-        <Icon
-          icon="material-symbols:laptop-chromebook-outline"
-          class="icn-btn"
-        />
+        <Icon icon="bi:briefcase" class="icn-btn" />
       </button>
     </div>
   </nav>
@@ -40,7 +37,7 @@ import { Icon } from "@iconify/vue";
   width: 60px;
   border-radius: 40px;
   background: #373737;
-  border: #fff;
+
   display: flex;
   align-items: center;
   justify-content: center;
