@@ -25,5 +25,12 @@ import FloatingNavBar from "./components/FloatingNavBar.vue";
 
 .nav {
   position: fixed;
+  top: 35%;
+  left: 5%;
+}
+.hero-landing {
+  height: 600px;
+  width: 100%;
+  padding-top: 100px;
 }
 </style>

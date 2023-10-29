@@ -16,9 +16,9 @@
     </div>
     <div class="contacts">
       <ul>
-        <li>🧑‍💻 I'm currenlty looking for work</li>
-        <li>🌱 I'm currently learning VueJS</li>
-        <li>🔖 I'm currently Reading Crime and Punishment by Dostoyevsky</li>
+        <li>🧑‍💻 I'm currently looking for work</li>
+        <li>🌱 I'm learning VueJS</li>
+        <li>🔖 I'm Reading Crime and Punishment by Dostoyevsky</li>
         <!-- <li>👔 Reach out to me <a href id="ContactHere">Here</a>!</li>
         <li>📝 Download my CV <a href id="DownloadCV">Here</a>!</li> -->
       </ul>
@@ -61,31 +61,29 @@ import { Icon } from "@iconify/vue";
 
 <style lang="scss" scoped>
 .intro {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 .intro h1 {
-  font-size: 24px;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 .intro h2 {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .intro p {
   text-align: left;
-  font-size: 1.1em;
-  width: 600px;
-  margin-top: 20px;
+  font-size: 18px;
+  width: 500px;
+  margin-top: 30px;
 }
 .hero {
-  display: flex;
-  width: 600px;
-
-  flex-direction: column;
-  margin: 0 auto;
+  width: 500px;
+  margin: auto;
 }
 
 .contacts ul {
-  margin-left: 30px;
+  margin-left: 25px;
 
   font-size: 1em;
 }
@@ -151,7 +149,6 @@ import { Icon } from "@iconify/vue";
   width: 160px;
 
   gap: 0 10px;
-  margin-left: 20px;
 }
 
 .github-logo:hover {
