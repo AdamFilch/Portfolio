@@ -83,7 +83,7 @@
   width: 600px;
   background-color: #fff;
   translate: -5px -5px;
-  box-shadow: 10px 10px 0px 1px rgb(129, 129, 129);
+  box-shadow: 15px 15px 0px 1px rgb(129, 129, 129);
 }
 
 .content {
