@@ -16,9 +16,18 @@
     </div>
     <div class="contacts">
       <ul>
-        <li>🧑‍💻 I'm currently looking for work</li>
-        <li>🌱 I'm learning VueJS</li>
-        <li>🔖 I'm Reading Crime and Punishment by Dostoyevsky</li>
+        <li>
+          🧑‍💻 <span>I'm <span>currently looking for work</span></span>
+        </li>
+        <li>
+          🌱 <span>I'm learning <span>VueJS</span></span>
+        </li>
+        <li>
+          🔖
+          <span
+            >I'm Reading <span>Crime and Punishment by Dostoyevsky</span></span
+          >
+        </li>
         <!-- <li>👔 Reach out to me <a href id="ContactHere">Here</a>!</li>
         <li>📝 Download my CV <a href id="DownloadCV">Here</a>!</li> -->
       </ul>
@@ -74,6 +83,7 @@ import { Icon } from "@iconify/vue";
 .intro p {
   text-align: left;
   font-size: 18px;
+  color: #ffffffa1;
 
   margin-top: 30px;
 }
@@ -86,6 +96,10 @@ import { Icon } from "@iconify/vue";
   margin-left: 25px;
 
   font-size: 1em;
+}
+
+.contacts ul span {
+  color: #ffffffa1;
 }
 
 .reachout-download {

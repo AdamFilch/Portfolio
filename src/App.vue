@@ -2,10 +2,12 @@
 import HeroLanding from "./components/HeroLanding.vue";
 import FloatingNavBar from "./components/FloatingNavBar.vue";
 import AboutMe from "./components/AboutMe.vue";
+import MyTimeline from "./components/MyTimeline.vue";
 </script>
 
 <template>
   <div class="app">
+    <div class="theme-tog"></div>
     <div class="nav">
       <FloatingNavBar />
     </div>
@@ -15,6 +17,7 @@ import AboutMe from "./components/AboutMe.vue";
 
     <div class="body">
       <AboutMe />
+      <MyTimeline />
     </div>
     <div class="footer"></div>
   </div>
@@ -29,11 +32,11 @@ import AboutMe from "./components/AboutMe.vue";
 .nav {
   position: fixed;
   top: 35%;
-  left: 5%;
+  left: 3%;
 }
 .hero-landing {
-  height: 600px;
+  height: 750px;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 130px;
 }
 </style>
