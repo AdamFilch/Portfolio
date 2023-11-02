@@ -3,6 +3,7 @@ import HeroLanding from "./components/HeroLanding.vue";
 import FloatingNavBar from "./components/FloatingNavBar.vue";
 import AboutMe from "./components/AboutMe.vue";
 import MyTimeline from "./components/MyTimeline.vue";
+import MyTechnologies from "./components/MyTechnologies.vue";
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import MyTimeline from "./components/MyTimeline.vue";
     <div class="body">
       <AboutMe />
       <MyTimeline />
+      <MyTechnologies />
     </div>
     <div class="footer"></div>
   </div>

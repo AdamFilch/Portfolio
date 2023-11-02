@@ -78,14 +78,13 @@
 
 .timeline {
   width: auto;
-  height: 700px;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .tl-line {
-  height: 700px;
+  height: 900px;
   width: 3px;
   left: 49.9%;
   background-color: #ffffffa1;
