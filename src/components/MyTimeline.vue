@@ -6,6 +6,7 @@
       <box class="title-decor"></box>
     </div>
 
+    <div class="year-slider"></div>
     <div class="timeline">
       <div class="tl-line"></div>
       <div class="content">
