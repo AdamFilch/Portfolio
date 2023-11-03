@@ -6,7 +6,11 @@
       <box class="title-decor"></box>
     </div>
 
-    <div class="year-slider"></div>
+    <div class="year-slider">
+      <button class="backward-btn"></button>
+      <h1>Present</h1>
+      <button class="forward-btn"></button>
+    </div>
     <div class="timeline">
       <div class="tl-line"></div>
       <div class="content">
@@ -77,6 +81,13 @@
   background-color: #ffffff00;
 }
 
+.year-slider {
+  display: flex;
+  justify-content: center;
+  gap: 280px;
+  margin-top: 40px;
+}
+
 .timeline {
   width: auto;
   display: flex;
@@ -93,8 +104,8 @@
 }
 
 .point {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   background-color: #fff;
   border-radius: 100px;
   position: absolute;

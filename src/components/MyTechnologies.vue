@@ -36,10 +36,6 @@ import { skillsData, filter } from "../lib/myskills.js";
 </script>
 
 <style lang="scss" scoped>
-#myTech {
-  height: 2000px;
-}
-
 .title-card {
   justify-content: center;
   display: flex;

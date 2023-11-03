@@ -4,6 +4,7 @@ import FloatingNavBar from "./components/FloatingNavBar.vue";
 import AboutMe from "./components/AboutMe.vue";
 import MyTimeline from "./components/MyTimeline.vue";
 import MyTechnologies from "./components/MyTechnologies.vue";
+import ContactMe from "./components/ContactMe.vue";
 </script>
 
 <template>
@@ -21,7 +22,9 @@ import MyTechnologies from "./components/MyTechnologies.vue";
       <MyTimeline />
       <MyTechnologies />
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+      <ContactMe />
+    </div>
   </div>
 </template>
 
@@ -39,6 +42,10 @@ import MyTechnologies from "./components/MyTechnologies.vue";
 .hero-landing {
   height: 750px;
   width: 100%;
-  padding-top: 130px;
+  margin-top: 130px;
+}
+
+.footer {
+  margin-top: 130px;
 }
 </style>
