@@ -84,7 +84,7 @@
 .year-slider {
   display: flex;
   justify-content: center;
-  gap: 280px;
+  gap: 210px;
   margin-top: 40px;
 }
 

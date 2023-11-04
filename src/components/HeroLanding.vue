@@ -10,8 +10,8 @@
 
       <p>
         A nerd with a knack for tech that likes building things online with the
-        help of open source tools and frameworks. I enjoy Programming and I am
-        an avid Reader. Get to know me.
+        help of open source tools and frameworks. Oh and, I also read, like, a
+        lot. Get to know me !
       </p>
     </div>
     <div class="contacts">

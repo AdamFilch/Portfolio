@@ -5,6 +5,7 @@ import AboutMe from "./components/AboutMe.vue";
 import MyTimeline from "./components/MyTimeline.vue";
 import MyTechnologies from "./components/MyTechnologies.vue";
 import ContactMe from "./components/ContactMe.vue";
+import TinyFooter from "./components/footer/TinyFooter.vue";
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import ContactMe from "./components/ContactMe.vue";
     </div>
     <div class="footer">
       <ContactMe />
+      <TinyFooter />
     </div>
   </div>
 </template>
@@ -46,6 +48,6 @@ import ContactMe from "./components/ContactMe.vue";
 }
 
 .footer {
-  margin-top: 130px;
+  margin-top: 100px;
 }
 </style>

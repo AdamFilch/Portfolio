@@ -15,7 +15,7 @@
     </div>
 
     <div class="filter-section">
-      <h1>Filter Items:</h1>
+      <h1>Legend</h1>
       <div class="filters">
         <ul class="filter-collection">
           <li
@@ -77,8 +77,8 @@ import { skillsData, filter } from "../lib/myskills.js";
 }
 .skill {
   font-size: 22px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   list-style: none;
