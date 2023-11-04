@@ -15,7 +15,18 @@
         </p>
         <div>
           <div>
-            <button class="resume-btn">Resume</button>
+            <div class="action-btns">
+              <button class="email-btn">E-mail me</button>
+              <button class="resume-btn">
+                Resume
+                <Icon
+                  icon="bi:arrow-down-right"
+                  style="color: #fff"
+                  height="14px"
+                />
+              </button>
+            </div>
+
             <div class="btns">
               <!-- <div class="reachout-download">
               <button class="btn">👔 Reach out to me</button>
@@ -125,7 +136,31 @@ import { Icon } from "@iconify/vue";
   box-shadow: 15px 15px 0px 1px rgb(129, 129, 129);
 }
 
+.action-btns {
+  display: flex;
+  gap: 20px;
+}
+
 .resume-btn {
+  font-size: 18px;
+  background-color: transparent;
+  border-color: #fff;
+  border-style: solid;
+  border-radius: 7px;
+  height: 40px;
+  width: 150px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.resume-btn:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0px 0px 10px 1px rgb(129, 129, 129);
+}
+
+.email-btn {
   font-size: 18px;
   background-color: transparent;
   border-color: #fff;
@@ -137,7 +172,7 @@ import { Icon } from "@iconify/vue";
   margin-bottom: 20px;
 }
 
-.resume-btn:hover {
+.email-btn:hover {
   transform: scale(1.05);
   transition: transform 0.2s;
   box-shadow: 0px 0px 10px 1px rgb(129, 129, 129);

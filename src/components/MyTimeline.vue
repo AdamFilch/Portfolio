@@ -8,7 +8,7 @@
 
     <div class="year-slider">
       <button class="backward-btn"></button>
-      <h1>Present</h1>
+      <h1 class="year">Present</h1>
       <button class="forward-btn"></button>
     </div>
     <div class="timeline">
@@ -56,6 +56,8 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+@import "../assets/_shared.scss";
+
 .title-card {
   justify-content: center;
   display: flex;
@@ -86,6 +88,10 @@
   justify-content: center;
   gap: 210px;
   margin-top: 40px;
+}
+
+.year-slider .year {
+  color: $dark-primary;
 }
 
 .timeline {

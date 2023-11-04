@@ -24,9 +24,7 @@
         </li>
         <li>
           🔖
-          <span
-            >I'm Reading <span>Crime and Punishment by Dostoyevsky</span></span
-          >
+          <span>I'm Reading <span>Four Thousand Weeks</span></span>
         </li>
         <!-- <li>👔 Reach out to me <a href id="ContactHere">Here</a>!</li>
         <li>📝 Download my CV <a href id="DownloadCV">Here</a>!</li> -->

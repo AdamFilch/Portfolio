@@ -1,5 +1,5 @@
 <script setup>
-import HeroLanding from "./components/HeroLanding.vue";
+import HeroLanding from "./components/hero/HeroLanding.vue";
 import FloatingNavBar from "./components/FloatingNavBar.vue";
 import AboutMe from "./components/AboutMe.vue";
 import MyTimeline from "./components/MyTimeline.vue";

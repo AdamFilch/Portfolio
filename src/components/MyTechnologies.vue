@@ -132,7 +132,7 @@ import { skillsData, filter } from "../lib/myskills.js";
 }
 
 .filter:hover {
-  translate: 0px -10px;
+  translate: 0px -5px;
   box-shadow: 0px 0px 10px 2px rgb(129, 129, 129);
 }
 </style>
