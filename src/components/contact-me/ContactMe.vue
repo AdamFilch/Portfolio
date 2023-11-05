@@ -36,27 +36,35 @@
               <button class="btn">📝 Download my CV</button>
             </div> -->
               <div class="social-btns">
-                <button class="social-btn" id="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/in/adamadamadam/"
+                  class="social-btn"
+                  id="LinkedIn"
+                >
                   <Icon
                     icon="bxl:linkedin-square"
                     style="font-size: 35px"
                     class="sbtns linkedin-logo"
                   />
-                </button>
-                <button class="social-btn" id="GitHub">
+                </a>
+                <a
+                  href="https://github.com/AdamFilch"
+                  class="social-btn"
+                  id="GitHub"
+                >
                   <Icon
                     icon="bxl:github"
                     style="font-size: 35px"
                     class="sbtns github-logo"
                   />
-                </button>
-                <button class="social-btn" id="Instagram">
+                </a>
+                <!-- <a class="social-btn" id="Instagram">
                   <Icon
                     icon="bxl:instagram"
                     style="font-size: 35px"
                     class="sbtns instagram-logo"
                   />
-                </button>
+                </a> -->
               </div>
             </div>
           </div>
@@ -201,9 +209,8 @@ import { Icon } from "@iconify/vue";
 
 .social-btns {
   justify-content: center;
-  align-items: start;
   display: flex;
-  width: 150px;
+  width: 110px;
 
   gap: 0 10px;
 }
@@ -212,31 +219,25 @@ import { Icon } from "@iconify/vue";
   color: rgb(139, 139, 139);
   width: 49px;
   height: 49px;
-  transition:
-    color 0.3s,
-    height 0.3s,
-    width 0.3s;
 }
 .linkedin-logo:hover {
   color: #0a66c2;
   width: 49px;
   height: 49px;
-  transition:
-    color 0.3s,
-    height 0.3s,
-    width 0.3s;
 }
 .instagram-logo:hover {
   color: #e1306c;
   width: 49px;
   height: 49px;
+}
+
+.sbtns {
+  display: flex;
+  justify-items: center;
+  color: #fff;
   transition:
     color 0.3s,
     height 0.3s,
     width 0.3s;
-}
-
-.sbtns {
-  color: #fff;
 }
 </style>

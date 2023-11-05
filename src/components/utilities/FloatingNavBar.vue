@@ -1,35 +1,44 @@
 <template>
-  <nav class="navbar">
-    <nav class="btn-div">
-      <a href="#home-nav" class="nav-btn edge-btn" id="about">
-        <Icon icon="bi:grid" class="icn-btn" />
-      </a>
+  <div class="big-bar">
+    <nav class="navbar">
+      <div class="btn-div">
+        <a href="#home-nav" class="nav-btn edge-btn" id="about">
+          <Icon icon="bi:grid" class="icn-btn" />
+        </a>
 
-      <a href="#timeline-nav" class="nav-btn" id="timeline">
-        <Icon
-          icon="ic:outline-fingerprint"
-          class="icn-btn"
-          style="color: #fff"
-        />
-      </a>
+        <a href="#timeline-nav" class="nav-btn" id="timeline">
+          <Icon
+            icon="ic:outline-fingerprint"
+            class="icn-btn"
+            style="color: #fff"
+          />
+        </a>
 
-      <a href="#tech-nav" class="nav-btn" id="Tech Stack">
-        <Icon
-          icon="material-symbols:code-blocks-outline-rounded"
-          class="icn-btn"
-          style="color: #fff"
-        />
-      </a>
+        <a href="#tech-nav" class="nav-btn" id="Tech Stack">
+          <Icon
+            icon="material-symbols:code-blocks-outline-rounded"
+            class="icn-btn"
+            style="color: #fff"
+          />
+        </a>
 
-      <a href="#books-nav" class="nav-btn" id="Books">
-        <Icon icon="bi:book" class="icn-btn" style="color: #fff" />
-      </a>
+        <a href="#books-nav" class="nav-btn" id="Books">
+          <Icon icon="bi:book" class="icn-btn" style="color: #fff" />
+        </a>
 
-      <a href="#contact-nav" class="nav-btn edge-btn" id="Contact Me">
-        <Icon icon="bi:briefcase" class="icn-btn" />
-      </a>
+        <a href="#contact-nav" class="nav-btn edge-btn" id="Contact Me">
+          <Icon icon="bi:briefcase" class="icn-btn" />
+        </a>
+      </div>
     </nav>
-  </nav>
+    <!-- <div class="nav-subs">
+      <div class="nav-btn-subs">Home</div>
+      <div class="nav-btn-subs">Timeline</div>
+      <div class="nav-btn-subs">Tech Stack</div>
+      <div class="nav-btn-subs">Projects</div>
+      <div class="nav-btn-subs">Contact Me</div>
+    </div> -->
+  </div>
 </template>
 
 <script setup>
@@ -102,5 +111,27 @@ import { Icon } from "@iconify/vue";
   background-color: #fff;
 
   border-radius: 100px;
+}
+
+.big-bar {
+  display: flex;
+}
+
+.nav-subs {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-left: 15px;
+  row-gap: 20px;
+}
+
+.nav-btn-subs {
+  border-radius: 15px;
+  padding: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  text-align: center;
+  background-color: #fff;
+  color: #121212;
 }
 </style>

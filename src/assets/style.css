@@ -2,8 +2,8 @@
   font-family: Poppins, sans-serif;
 
   color-scheme: light dark;
-  background-color: #151515;
-
+  background-color: rgba(14, 24, 10, 0.777);
+  /* rgb(14, 26, 14) */
   line-height: 1.5;
   scroll-behavior: smooth;
 }
