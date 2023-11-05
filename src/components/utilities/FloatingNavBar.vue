@@ -1,29 +1,34 @@
 <template>
   <nav class="navbar">
-    <div class="btn-div">
-      <button class="nav-btn edge-btn" id="about">
+    <nav class="btn-div">
+      <a href="#home-nav" class="nav-btn edge-btn" id="about">
         <Icon icon="bi:grid" class="icn-btn" />
-      </button>
+      </a>
 
-      <button class="nav-btn" id="timeline">
-        <Icon icon="ic:outline-fingerprint" class="icn-btn" />
-      </button>
+      <a href="#timeline-nav" class="nav-btn" id="timeline">
+        <Icon
+          icon="ic:outline-fingerprint"
+          class="icn-btn"
+          style="color: #fff"
+        />
+      </a>
 
-      <button class="nav-btn" id="Tech Stack">
+      <a href="#tech-nav" class="nav-btn" id="Tech Stack">
         <Icon
           icon="material-symbols:code-blocks-outline-rounded"
           class="icn-btn"
+          style="color: #fff"
         />
-      </button>
+      </a>
 
-      <button class="nav-btn" id="Books">
-        <Icon icon="bi:book" class="icn-btn" />
-      </button>
+      <a href="#books-nav" class="nav-btn" id="Books">
+        <Icon icon="bi:book" class="icn-btn" style="color: #fff" />
+      </a>
 
-      <button class="nav-btn edge-btn" id="Contact Me">
+      <a href="#contact-nav" class="nav-btn edge-btn" id="Contact Me">
         <Icon icon="bi:briefcase" class="icn-btn" />
-      </button>
-    </div>
+      </a>
+    </nav>
   </nav>
 </template>
 
@@ -32,6 +37,7 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/shared.scss";
 .navbar {
   height: 275px;
   width: 60px;
@@ -74,6 +80,11 @@ import { Icon } from "@iconify/vue";
   background-color: #444444;
 }
 
+.icn-btn {
+  height: 25px;
+  width: 25px;
+}
+
 .edge-btn {
   border-radius: 100px;
   color: #121212;
@@ -91,10 +102,5 @@ import { Icon } from "@iconify/vue";
   background-color: #fff;
 
   border-radius: 100px;
-}
-
-.icn-btn {
-  height: 25px;
-  width: 25px;
 }
 </style>

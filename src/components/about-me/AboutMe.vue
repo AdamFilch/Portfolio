@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home-nav">
     <div class="title-card">
       <h1 class="title">WHO I AM</h1>
       <box class="title-decor"></box>
@@ -17,12 +17,11 @@
             humanitarean.
           </p>
           <p>
-            Throughout my childhood I had many with interactions with computers.
             I
-            <span>grew a curiousity</span> in how devices understand the buttons
-            I was pushing. In highschool I chose ICT IGCSE, and since then I
-            continue to learn and understand the development of software and
-            computer interaction.
+            <span>grew a curiousity</span>
+            in how devices understand the buttons I was pushing. In highschool I
+            chose ICT IGCSE, and since then I continue to learn and understand
+            the development of software and computer interaction.
           </p>
           <p>
             Today, with my acquired knowledge I <span>build apps</span>,

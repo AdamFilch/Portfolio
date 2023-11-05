@@ -34,6 +34,7 @@ import TinyFooter from "../components/footer/TinyFooter.vue";
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .nav {

@@ -1,5 +1,5 @@
 <template>
-  <div id="myTech">
+  <div id="tech-nav">
     <div class="title-card">
       <box class="title-decor-null"></box>
       <h1 class="title">WHAT I USE</h1>

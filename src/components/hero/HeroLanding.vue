@@ -11,7 +11,7 @@
       <p>
         A nerd with a knack for tech that likes building things online with the
         help of open source tools and frameworks. Oh and, I also read, like, a
-        lot. Get to know me !
+        lot. <a href="#home-nav" class="get-to-know">Get to know me</a> !
       </p>
     </div>
     <div class="contacts">
@@ -89,6 +89,23 @@ import { Icon } from "@iconify/vue";
 
   margin-top: 30px;
 }
+
+.get-to-know {
+  color: #ffffffa1;
+  text-decoration: underline 0.15em rgba(236, 0, 0, 0);
+  position: relative;
+  text-underline-offset: 0px;
+  transition:
+    text-decoration-color 0.3s,
+    text-underline-offset 0.3s;
+}
+
+.get-to-know:hover {
+  color: $dark-primary;
+  text-underline-offset: 8px;
+  text-decoration-color: $dark-primary;
+}
+
 .hero {
   width: 600px;
   margin: auto;

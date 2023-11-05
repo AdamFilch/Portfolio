@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-me-section">
+  <div id="contact-nav" class="contact-me-section">
     <div class="title-card">
       <box class="title-decor-null"></box>
       <h1 class="title">CONTACT ME</h1>
