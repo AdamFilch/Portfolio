@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <div class="intro">
-      <h1>Hey there, ✌️</h1>
+      <h1 class="hey-there">Hey there, <span style="color: #fff">✌️</span></h1>
 
       <h2>I'm Adam Filchoir</h2>
       <div>
@@ -67,6 +67,10 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/shared.scss";
+.hey-there {
+  color: $dark-primary;
+}
 .intro {
   margin-bottom: 14px;
 }

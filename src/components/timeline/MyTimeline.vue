@@ -56,7 +56,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@import "../assets/_shared.scss";
+@import "../../assets/_shared.scss";
 
 .title-card {
   justify-content: center;

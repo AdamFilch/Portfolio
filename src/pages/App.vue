@@ -1,11 +1,11 @@
 <script setup>
-import HeroLanding from "./components/hero/HeroLanding.vue";
-import FloatingNavBar from "./components/FloatingNavBar.vue";
-import AboutMe from "./components/AboutMe.vue";
-import MyTimeline from "./components/MyTimeline.vue";
-import MyTechnologies from "./components/MyTechnologies.vue";
-import ContactMe from "./components/ContactMe.vue";
-import TinyFooter from "./components/footer/TinyFooter.vue";
+import HeroLanding from "../components/hero/HeroLanding.vue";
+import FloatingNavBar from "../components/utilities/FloatingNavBar.vue";
+import AboutMe from "../components/about-me/AboutMe.vue";
+import MyTimeline from "../components/timeline/MyTimeline.vue";
+import MyTechnologies from "../components/technologies/MyTechnologies.vue";
+import ContactMe from "../components/contact-me/ContactMe.vue";
+import TinyFooter from "../components/footer/TinyFooter.vue";
 </script>
 
 <template>

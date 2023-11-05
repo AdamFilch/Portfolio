@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import { skillsData, filter } from "../lib/myskills.js";
+import { skillsData, filter } from "../../lib/myskills.js";
 </script>
 
 <style lang="scss" scoped>

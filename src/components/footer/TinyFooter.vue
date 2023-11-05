@@ -42,8 +42,8 @@
 span {
   color: #d11b1bfc;
   letter-spacing: 1px;
-  font-weight: 600;
-  text-shadow: 0px 0px 3px #cf2b2ba8;
+  font-weight: 700;
+  text-shadow: 0px 0px 10px #d86b6b;
 }
 
 p {

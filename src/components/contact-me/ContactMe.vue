@@ -8,11 +8,14 @@
     <div class="reach-out">
       <div class="reach-out-description">
         <h1>Lets have a chat.</h1>
-        <p>
-          A nerd with a knack for tech that likes building things online with
-          the help of open source tools and frameworks. Oh and, I also read,
-          like, a lot.
-        </p>
+        <div>
+          <p>
+            Thanks for taking your time to get to know me. Reach out for any
+            inquiries. My contact is open to anyone, and everyone. I hope to see
+            you again! <span style="color: #fff">👋</span>
+          </p>
+        </div>
+
         <div>
           <div>
             <div class="action-btns">
@@ -69,7 +72,7 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/shared.scss";
+@import "../../assets/shared.scss";
 .title-card {
   justify-content: right;
   display: flex;
@@ -116,7 +119,7 @@ import { Icon } from "@iconify/vue";
 
 .reach-out-description p {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .img-box {
