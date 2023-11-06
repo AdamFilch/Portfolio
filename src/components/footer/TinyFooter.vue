@@ -6,7 +6,7 @@
           // Made with
           <span class="footer-highlight"
             >Love
-            <!-- <span class="tooltiptext">*Lub* *Dub*</span> -->
+            <span v-on:mousemove="fn" class="tooltiptext"><DubDub /></span>
           </span>
           by Adam
         </p>
@@ -17,7 +17,7 @@
           <p>
             "Power is given to those who
             <span class="footer-highlight"
-              >dare<span v-on:mousemove="fn()" class="footer-book-tooltip">
+              >dare<span v-on:mousemove="fn" class="footer-book-tooltip">
                 Fyodor Dostoyevsky's, Crime and Punishment
               </span></span
             >
@@ -30,16 +30,15 @@
 </template>
 
 <script>
-// document.addEventListener("mousemove", fn, false);
+// import DubDub from "./DubDub.vue";
 
 export default {
   mounted() {
     const tooltips = document.querySelectorAll(".footer-book-tooltip");
-
     document.addEventListener("mousemove", (e) => {
       tooltips.forEach((tooltip) => {
         tooltip.style.left = e.pageX - 175 + "px";
-        tooltip.style.top = e.pageY - 50 + "px";
+        tooltip.style.top = e.pageY - 55 + "px";
       });
     });
   },
@@ -78,23 +77,19 @@ p {
 }
 
 .footer-highlight:hover .footer-book-tooltip {
-  display: block;
-}
-
-.footer-highlight {
-  transition: display 0.2s;
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .footer-book-tooltip {
-  background-color: #fff;
   border-radius: 15px;
+  opacity: 0;
   font-size: 14px;
   padding: 5px;
-  display: none;
   position: absolute;
-  text-decoration: none;
-  text-shadow: 0px 0px 10px #ffffff;
-  color: #121212;
-  transition: display 0.2s;
+  text-shadow: 0px 0px 10px px #000000;
+  color: hotpink;
+  transition: opacity 0.3s ease-in-out;
 }
 </style>
