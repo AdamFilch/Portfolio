@@ -4,9 +4,10 @@
       <div class="copyright">
         <p>
           // Made with
-          <span class="footer-highlight"
+          <span class="love footer-highlight"
             >Love
-            <span v-on:mousemove="fn" class="tooltiptext"><DubDub /></span>
+            <span class="lub">*lub*</span>
+            <span class="dub">*dub*</span>
           </span>
           by Adam
         </p>
@@ -17,7 +18,7 @@
           <p>
             "Power is given to those who
             <span class="footer-highlight"
-              >dare<span v-on:mousemove="fn" class="footer-book-tooltip">
+              >dare<span v-on:mousemove="mounted()" class="footer-book-tooltip">
                 Fyodor Dostoyevsky's, Crime and Punishment
               </span></span
             >
@@ -77,7 +78,7 @@ p {
 }
 
 .footer-highlight:hover .footer-book-tooltip {
-  display: flex;
+  display: block;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
@@ -88,8 +89,39 @@ p {
   font-size: 14px;
   padding: 5px;
   position: absolute;
-  text-shadow: 0px 0px 10px px #000000;
+  text-shadow: 0px 0px 10px 10px #000000;
   color: hotpink;
   transition: opacity 0.3s ease-in-out;
+}
+
+.love {
+  position: relative;
+}
+
+.dub {
+  position: absolute;
+  color: hotpink;
+  opacity: 0;
+  top: -40px;
+  left: 30px;
+  transition: opacity 0.3s ease-in-out 0.3s;
+}
+
+.lub {
+  opacity: 0;
+  position: absolute;
+  color: hotpink;
+  top: -40px;
+  left: -40px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.love:hover .lub {
+  display: block;
+  opacity: 1;
+}
+.love:hover .dub {
+  display: block;
+  opacity: 1;
 }
 </style>
