@@ -16,57 +16,55 @@
           </p>
         </div>
 
-        <div>
-          <div>
-            <div class="action-btns">
-              <button class="email-btn">E-mail me</button>
-              <button class="resume-btn">
-                Resume
-                <Icon
-                  icon="bi:arrow-down-right"
-                  style="color: #fff"
-                  height="14px"
-                />
-              </button>
-            </div>
+        <div class="action-btns">
+          <a href="mailto:filchoiradam@gmail.com">
+            <button onclick="" class="email-btn">E-mail me</button>
+          </a>
+          <button class="resume-btn">
+            Resume
+            <Icon
+              icon="bi:arrow-down-right"
+              style="color: #fff"
+              height="14px"
+            />
+          </button>
+        </div>
 
-            <div class="btns">
-              <!-- <div class="reachout-download">
-              <button class="btn">👔 Reach out to me</button>
+        <div class="btns">
+          <!-- <div class="reachout-download">
+              <a class="btn">👔 Reach out to me</button>
               <button class="btn">📝 Download my CV</button>
             </div> -->
-              <div class="social-btns">
-                <a
-                  href="https://www.linkedin.com/in/adamadamadam/"
-                  class="social-btn"
-                  id="LinkedIn"
-                >
-                  <Icon
-                    icon="bxl:linkedin-square"
-                    style="font-size: 35px"
-                    class="sbtns linkedin-logo"
-                  />
-                </a>
-                <a
-                  href="https://github.com/AdamFilch"
-                  class="social-btn"
-                  id="GitHub"
-                >
-                  <Icon
-                    icon="bxl:github"
-                    style="font-size: 35px"
-                    class="sbtns github-logo"
-                  />
-                </a>
-                <!-- <a class="social-btn" id="Instagram">
+          <div class="social-btns">
+            <a
+              href="https://www.linkedin.com/in/adamadamadam/"
+              class="social-btn"
+              id="LinkedIn"
+            >
+              <Icon
+                icon="bxl:linkedin-square"
+                style="font-size: 35px"
+                class="sbtns linkedin-logo"
+              />
+            </a>
+            <a
+              href="https://github.com/AdamFilch"
+              class="social-btn"
+              id="GitHub"
+            >
+              <Icon
+                icon="bxl:github"
+                style="font-size: 35px"
+                class="sbtns github-logo"
+              />
+            </a>
+            <!-- <a class="social-btn" id="Instagram">
                   <Icon
                     icon="bxl:instagram"
                     style="font-size: 35px"
                     class="sbtns instagram-logo"
                   />
                 </a> -->
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -118,7 +116,6 @@ import { Icon } from "@iconify/vue";
 
 .reach-out-description {
   width: 600px;
-
   margin-top: 50px;
 }
 .reach-out-description h1 {
@@ -148,20 +145,22 @@ import { Icon } from "@iconify/vue";
 }
 
 .action-btns {
+  color: #fff;
+
   display: flex;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .resume-btn {
   font-size: 18px;
   background-color: transparent;
-  border-color: #fff;
-  border-style: solid;
+
   border-radius: 7px;
   height: 40px;
   width: 150px;
-  margin-left: 0px;
-  margin-bottom: 20px;
+  border: 2px solid #fff;
+
   transition: transform 0.2s;
 }
 
@@ -172,21 +171,29 @@ import { Icon } from "@iconify/vue";
 }
 
 .email-btn {
+  text-decoration: none;
+  text-align: center;
+  align-items: baseline;
+  color: #fff;
   font-size: 18px;
   background-color: transparent;
-  border-color: #fff;
-  border-style: solid;
+  border: 2px solid #fff;
   border-radius: 7px;
   height: 40px;
   width: 150px;
-  margin-left: 0px;
-  margin-bottom: 20px;
+  transition: transform 0.2s;
 }
 
 .email-btn:hover {
   transform: scale(1.05);
-  transition: transform 0.2s;
+  cursor: pointer;
   box-shadow: 0px 0px 10px 1px rgb(129, 129, 129);
+}
+
+.email-text {
+  display: inline;
+  align-self: center;
+  padding: auto;
 }
 
 .social-btn {

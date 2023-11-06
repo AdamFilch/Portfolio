@@ -41,6 +41,7 @@ import { skillsData, filter } from "../../lib/myskills.js";
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-top: 20px;
   gap: 30px;
 }
 .title {
