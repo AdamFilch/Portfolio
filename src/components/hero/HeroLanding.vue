@@ -80,10 +80,10 @@ import { Icon } from "@iconify/vue";
 }
 .intro h1 {
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 .intro h2 {
-  font-size: 44px;
+  font-size: 45px;
 }
 
 .intro p {
@@ -91,7 +91,7 @@ import { Icon } from "@iconify/vue";
   font-size: 18px;
   color: #ffffffa1;
 
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .get-to-know {

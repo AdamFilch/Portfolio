@@ -91,7 +91,8 @@ p {
   position: absolute;
   text-shadow: 0px 0px 10px 10px #000000;
   color: hotpink;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in;
+  transition: opacity 0.15s ease-out;
 }
 
 .love {

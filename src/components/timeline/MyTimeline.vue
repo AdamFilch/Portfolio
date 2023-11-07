@@ -5,55 +5,28 @@
       <h1 class="title">WHERE I'VE BEEN</h1>
       <box class="title-decor"></box>
     </div>
-
-    <div class="year-slider">
-      <button class="backward-btn"></button>
-      <h1 class="year">Present</h1>
-      <button class="forward-btn"></button>
-    </div>
     <div class="timeline">
-      <div class="tl-line"></div>
       <div class="content">
-        <div class="tlp birth">
-          <div class="point"></div>
-          <div class="left body">
-            <title></title>
-            <p></p>
-          </div>
-          <div class="right">2003</div>
+        <div
+          class="experience-sec"
+          v-for="(experience, index) in experiencedata"
+          :key="experience.id"
+        >
+          <TimelinePoint
+            :experience="experience"
+            :index="index"
+            :lenArray="experiencedata.length - 1"
+          />
         </div>
-
-        <div class="tlp intern-isatec">
-          <div class="point"></div>
-          <div class="right body">
-            <title></title>
-            <p></p>
-          </div>
-          <div class="left" style="justify-self: right">2003</div>
-        </div>
-        <div class="tlp parttime-credit">
-          <div class="point"></div>
-          <div class="left body">
-            <title></title>
-            <p></p>
-          </div>
-          <div class="right time">2003</div>
-        </div>
-        <div class="tlp graduated">
-          <div class="point"></div>
-          <div class="right body">
-            <title></title>
-            <p></p>
-          </div>
-          <div class="left time" style="justify-self: right">2003</div>
-        </div>
-        <div class="tlp next-step"></div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { experiencedata } from "../../lib/myexperience";
+import TimelinePoint from "./timelinePoint.vue";
+</script>
 
 <style lang="scss" scoped>
 @import "../../assets/_shared.scss";
@@ -84,61 +57,15 @@
   background-color: #ffffff00;
 }
 
-.year-slider {
-  display: flex;
-  justify-content: center;
-  gap: 210px;
-  margin-top: 40px;
-}
-
-.year-slider .year {
-  color: $dark-primary;
-}
-
 .timeline {
-  width: auto;
   display: flex;
   justify-content: center;
   margin-top: 80px;
+  position: relative;
 }
 
-.tl-line {
-  height: 900px;
-  width: 3px;
-  left: 49.9%;
-  background-color: #ffffffa1;
-  position: absolute;
-}
-
-.point {
-  height: 50px;
-  width: 50px;
-  background-color: #fff;
-  border-radius: 100px;
-  position: absolute;
-  left: 0;
-  right: 0;
-
-  margin: -18px auto;
-}
-
-.tlp {
-  display: grid;
-  grid: "left right";
-  column-gap: 130px;
-  width: 900px;
-  margin-bottom: 40px;
-}
-
-.left {
-  grid-area: left;
-}
-.right {
-  grid-area: right;
-}
-
-.body {
-  border-style: solid;
-  height: 200px;
+.content {
+  display: flex;
+  flex-direction: column;
 }
 </style>

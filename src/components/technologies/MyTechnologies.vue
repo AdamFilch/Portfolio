@@ -18,13 +18,13 @@
       <h1>Legend</h1>
       <div class="filters">
         <ul class="filter-collection">
-          <li
+          <button
             class="filter"
             v-for="filter_item in filter"
             :key="filter_item.filter"
           >
             {{ filter_item }}
-          </li>
+          </button>
         </ul>
       </div>
     </div>
@@ -127,7 +127,8 @@ import { skillsData, filter } from "../../lib/myskills.js";
   padding-top: 10px;
   padding-bottom: 10px;
   list-style: none;
-  border-style: solid;
+  background: transparent;
+  border: 2px solid #fff;
   border-radius: 10px;
   transition: translate 0.1s;
 }
