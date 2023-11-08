@@ -10,7 +10,7 @@
         <div
           class="experience-sec"
           v-for="(experience, index) in experiencedata"
-          :key="experience.id"
+          :key="experience.index"
         >
           <TimelinePoint
             :experience="experience"

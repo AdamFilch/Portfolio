@@ -2,14 +2,41 @@
   <div class="expr">
     <div class="point"></div>
     <div v-show="index !== lenArray" class="tl-line" />
-
+    <span class="year">{{ experience.year }}</span>
     <div class="body">
-      <div class="dateloc"></div>
-      <h1 class="title">{{}}</h1>
-      <h3 class="company"></h3>
-      <p></p>
+      <div class="type-dur">
+        <h4 class="company">{{ experience.type }}</h4>
+        <h4 class="duration">
+          {{ experience.startMonth }} <span>-</span> {{ experience.endMonth }}
+        </h4>
+      </div>
+
+      <div class="dateloc">
+        <p></p>
+      </div>
+      <div></div>
+      <h1 class="title">{{ experience.title }}</h1>
+      <h3 class="company">{{ experience.company }}</h3>
+      <ul class="description">
+        <li>
+          Worked as a bloa abladh blahs, did so and so, recieved this and that,
+          recognised for so and so
+        </li>
+        <li>
+          Worked as a bloa abladh blahs, did so and so, recieved this and that,
+          recognised for so and so
+        </li>
+        <li>
+          Worked as a bloa abladh blahs, did so and so, recieved this and that,
+          recognised for so and so
+        </li>
+      </ul>
       <div class="documents"></div>
-      <div class="skills"></div>
+      <div class="skills">
+        <span class="skill" v-for="skill in experience.skills" :key="skill">{{
+          skill
+        }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -28,9 +55,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/shared.scss";
 .expr {
   position: relative;
   padding-bottom: 30px;
+  color: #ffffffa1;
 }
 .point {
   height: 50px;
@@ -41,10 +70,21 @@ export default {
   right: -80px;
 }
 
+.year {
+  position: absolute;
+  right: -130px;
+  top: 15px;
+}
+
+.type-dur {
+  display: flex;
+  justify-content: space-between;
+}
+
 .body {
-  border-style: solid;
-  height: 200px;
-  min-width: 600px;
+  border: 2px solid #fff;
+  max-width: 600px;
+  padding: 10px;
 }
 
 .tl-line {
@@ -54,5 +94,21 @@ export default {
   right: -57px;
   background-color: #ffffffa1;
   position: absolute;
+}
+
+.description {
+  margin-inline: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.skills {
+  display: flex;
+  column-gap: 20px;
+  color: $dark-primary;
+  opacity: 0.5;
+}
+
+h1 {
+  color: $dark-primary;
 }
 </style>
