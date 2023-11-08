@@ -128,7 +128,7 @@ import { skillsData, filter } from "../../lib/myskills.js";
   padding-bottom: 10px;
   list-style: none;
   background: transparent;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   border-radius: 10px;
   transition: translate 0.1s;
 }

@@ -20,14 +20,16 @@
           <a href="mailto:filchoiradam@gmail.com">
             <button onclick="" class="email-btn">E-mail me</button>
           </a>
-          <button class="resume-btn">
-            Resume
-            <Icon
-              icon="bi:arrow-down-right"
-              style="color: #fff"
-              height="14px"
-            />
-          </button>
+          <a href="../../../Adam Filchoir CV.pdf" download>
+            <button onclick="" class="resume-btn">
+              Resume
+              <Icon
+                icon="bi:arrow-down-right"
+                style="color: #fff"
+                height="14px"
+              />
+            </button>
+          </a>
         </div>
 
         <div class="btns">
@@ -166,7 +168,7 @@ import { Icon } from "@iconify/vue";
 
 .resume-btn:hover {
   transform: scale(1.05);
-
+  cursor: pointer;
   box-shadow: 0px 0px 10px 1px rgb(129, 129, 129);
 }
 

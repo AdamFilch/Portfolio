@@ -5,7 +5,7 @@
 
     <div class="body">
       <div class="dateloc"></div>
-      <h1 class="title"></h1>
+      <h1 class="title">{{}}</h1>
       <h3 class="company"></h3>
       <p></p>
       <div class="documents"></div>
