@@ -7,13 +7,7 @@
     </div>
 
     <div class="technologies">
-      <ul class="technology-collection" v-if="filterToggle === false">
-        <li class="skill" v-for="skill in skillsData" :key="skill.skill_name">
-          {{ skill.skill_name }}
-        </li>
-      </ul>
-
-      <ul class="technology-collection" v-else-if="filterToggle === true">
+      <transition-group tag="ul" name="skills" class="technology-collection">
         <li
           class="skill"
           v-for="skill in filteredArray"
@@ -21,7 +15,7 @@
         >
           {{ skill.skill_name }}
         </li>
-      </ul>
+      </transition-group>
     </div>
 
     <div class="filter-section">
@@ -51,25 +45,30 @@ export default {
   data() {
     return {
       filterToggle: false,
-      filteredArray: [],
+
       currentFilter: "",
       skillsData: skillsData,
+      filteredArray: skillsData,
       filter: filter,
     };
   },
   methods: {
     filterMe(newFilter) {
       if (this.currentFilter === "") {
-        this.filterToggle = !this.filterToggle;
+        this.filterToggle = !this.filterToggle; // make true if the filter toggle is off meaning no filter in active
         this.currentFilter = newFilter;
+        this.filteredArray = techFilter(newFilter);
       } else if (newFilter === this.currentFilter) {
+        // if the user presses the same filter twice turn the toggle on
         this.filterToggle = !this.filterToggle;
         this.currentFilter = "";
+        this.filteredArray = this.skillsData;
       } else {
+        // else if the toggle is on but the user wants to use a new filter change the current filter
         this.currentFilter = newFilter;
+        this.filteredArray = techFilter(newFilter);
       }
-      console.log(this.filterToggle);
-      this.filteredArray = techFilter(newFilter);
+
       console.log(this.filteredArray);
     },
   },
@@ -90,6 +89,10 @@ export default {
   color: #ffffffa1;
   letter-spacing: 3px;
   min-width: 260px;
+}
+
+#tech-nav {
+  transition: all 0.5s linear;
 }
 
 .title-decor {
@@ -116,6 +119,7 @@ export default {
   flex-wrap: wrap;
   max-width: 900px;
   gap: 20px;
+  transition: all 0.5s linear;
 }
 .skill {
   font-size: 22px;
@@ -177,5 +181,20 @@ export default {
   translate: 0px -5px;
   box-shadow: 0px 0px 10px 2px rgb(129, 129, 129);
   cursor: pointer;
+}
+
+.skills-move,
+.skills-enter-active,
+.skills-leave-active {
+  transition: all 0.5s ease;
+}
+.skills-enter-from,
+.skills-leave-to {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.skills-leave-active {
+  position: absolute;
 }
 </style>

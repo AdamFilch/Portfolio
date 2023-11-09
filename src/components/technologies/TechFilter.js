@@ -5,7 +5,7 @@ export default function techFilter(filter) {
     for (let i = 0; i < skill.skill_type.length; i++) {
       //   console.log(skill.skill_type[i] + " is skill " + skill.skill_name);
       if (filter === skill.skill_type[i]) {
-        console.log(skill.skill_name);
+        // console.log(skill.skill_name);
         newArray.push(skill);
         break;
       }
