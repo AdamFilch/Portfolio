@@ -23,7 +23,7 @@
             v-for="filter_item in filter"
             :key="filter_item.filter"
           >
-            {{ filter_item }}
+            {{ filter_item.type }}
           </button>
         </ul>
       </div>

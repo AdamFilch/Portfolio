@@ -43,9 +43,7 @@ import TinyFooter from "../components/footer/TinyFooter.vue";
   left: 3%;
 }
 .hero-landing {
-  height: 750px;
-  width: 100%;
-  margin-top: 130px;
+  height: 100vh;
 }
 
 .footer {

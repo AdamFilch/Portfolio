@@ -60,8 +60,7 @@ import TimelinePoint from "./timelinePoint.vue";
 .timeline {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
-  position: relative;
+  margin-top: 60px;
 }
 
 .content {

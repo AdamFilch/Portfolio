@@ -112,6 +112,7 @@ import { Icon } from "@iconify/vue";
 
 .hero {
   width: 600px;
+  padding-top: 20vh;
   margin: auto;
 }
 

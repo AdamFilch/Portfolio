@@ -61,6 +61,7 @@ export default {
   padding-bottom: 30px;
   color: #ffffffa1;
 }
+
 .point {
   height: 50px;
   width: 50px;
@@ -85,6 +86,11 @@ export default {
   border: 2px solid #fff;
   max-width: 600px;
   padding: 10px;
+  transition: translate 0.3s;
+}
+.body:hover {
+  translate: -10px 0px;
+  box-shadow: 0px 0px 10px 5px rgb(129, 129, 129);
 }
 
 .tl-line {
@@ -97,15 +103,20 @@ export default {
 }
 
 .description {
-  margin-inline: 25px;
+  margin-inline: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.description li {
+  margin-top: 8px;
+}
+
 .skills {
   display: flex;
   column-gap: 20px;
   color: $dark-primary;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 h1 {

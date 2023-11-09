@@ -110,14 +110,45 @@ export const skillsData = [
   },
 ];
 
+// export const filter = [
+//   "language",
+//   "frontend-framework",
+//   "backend-framework",
+//   "web",
+//   "mobile",
+//   "tool",
+//   "other",
+// ];
+
 export const filter = [
-  "language",
-  "frontend-framework",
-  "backend-framework",
-  "web",
-  "mobile",
-  "tool",
-  "other",
+  {
+    type: "language",
+    color: "",
+  },
+  {
+    type: "frontend-framework",
+    color: "",
+  },
+  {
+    type: "backend-framework",
+    color: "",
+  },
+  {
+    type: "web",
+    color: "",
+  },
+  {
+    type: "mobile",
+    color: "",
+  },
+  {
+    type: "tool",
+    color: "",
+  },
+  {
+    type: "other",
+    color: "",
+  },
 ];
 
 // {
