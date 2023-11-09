@@ -8,7 +8,12 @@
 
     <div class="technologies">
       <ul class="technology-collection">
-        <li class="skill" v-for="skill in skillsData" :key="skill.skill_name">
+        <li
+          class="skill"
+          v-for="skill in skillsData"
+          :key="skill.skill_name"
+          :style="{ color: colorDecider(skill.skill_type) }"
+        >
           {{ skill.skill_name }}
         </li>
       </ul>
@@ -33,6 +38,7 @@
 
 <script setup>
 import { skillsData, filter } from "../../lib/myskills.js";
+import colorDecider from "./ColorDecider.js";
 </script>
 
 <style lang="scss" scoped>

@@ -44,6 +44,7 @@ import TinyFooter from "../components/footer/TinyFooter.vue";
 }
 .hero-landing {
   height: 100vh;
+  top: 0;
 }
 
 .footer {

@@ -18,7 +18,7 @@
           <p>
             "Power is given to those who
             <span class="footer-highlight"
-              >dare<span v-on:mousemove="mounted()" class="footer-book-tooltip">
+              >dare<span class="footer-book-tooltip">
                 Fyodor Dostoyevsky's, Crime and Punishment
               </span></span
             >
