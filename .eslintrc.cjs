@@ -27,5 +27,6 @@ module.exports = {
         endOfLine: "auto",
       },
     ],
+    "require-jsdoc": 0,
   },
 };

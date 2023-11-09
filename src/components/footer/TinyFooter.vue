@@ -34,15 +34,15 @@
 // import DubDub from "./DubDub.vue";
 
 export default {
-  mounted() {
-    const tooltips = document.querySelectorAll(".footer-book-tooltip");
-    document.addEventListener("mousemove", (e) => {
-      tooltips.forEach((tooltip) => {
-        tooltip.style.left = e.pageX - 175 + "px";
-        tooltip.style.top = e.pageY - 55 + "px";
-      });
-    });
-  },
+  // mounted() {
+  //   const tooltips = document.querySelectorAll(".footer-book-tooltip");
+  //   document.addEventListener("mousemove", (e) => {
+  //     tooltips.forEach((tooltip) => {
+  //       tooltip.style.left = e.pageX - 175 + "px";
+  //       tooltip.style.top = e.pageY - 55 + "px";
+  //     });
+  //   });
+  // },
 };
 </script>
 

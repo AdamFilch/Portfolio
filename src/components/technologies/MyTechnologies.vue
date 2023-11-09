@@ -7,12 +7,17 @@
     </div>
 
     <div class="technologies">
-      <ul class="technology-collection">
+      <ul class="technology-collection" v-if="filterToggle === false">
+        <li class="skill" v-for="skill in skillsData" :key="skill.skill_name">
+          {{ skill.skill_name }}
+        </li>
+      </ul>
+
+      <ul class="technology-collection" v-else-if="filterToggle === true">
         <li
           class="skill"
-          v-for="skill in skillsData"
+          v-for="skill in filteredArray"
           :key="skill.skill_name"
-          :style="{ color: colorDecider(skill.skill_type) }"
         >
           {{ skill.skill_name }}
         </li>
@@ -27,6 +32,7 @@
             class="filter"
             v-for="filter_item in filter"
             :key="filter_item.filter"
+            @click="filterMe(filter_item.type)"
           >
             {{ filter_item.type }}
           </button>
@@ -36,9 +42,38 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { skillsData, filter } from "../../lib/myskills.js";
-import colorDecider from "./ColorDecider.js";
+// import colorDecider from "./ColorDecider.js";
+import techFilter from "./TechFilter.js";
+// import { ref } from "vue";
+export default {
+  data() {
+    return {
+      filterToggle: false,
+      filteredArray: [],
+      currentFilter: "",
+      skillsData: skillsData,
+      filter: filter,
+    };
+  },
+  methods: {
+    filterMe(newFilter) {
+      if (this.currentFilter === "") {
+        this.filterToggle = !this.filterToggle;
+        this.currentFilter = newFilter;
+      } else if (newFilter === this.currentFilter) {
+        this.filterToggle = !this.filterToggle;
+        this.currentFilter = "";
+      } else {
+        this.currentFilter = newFilter;
+      }
+      console.log(this.filterToggle);
+      this.filteredArray = techFilter(newFilter);
+      console.log(this.filteredArray);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -132,9 +167,8 @@ import colorDecider from "./ColorDecider.js";
   padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
-  list-style: none;
   background: transparent;
-  border: 3px solid #fff;
+  border: 3px solid;
   border-radius: 10px;
   transition: translate 0.1s;
 }
@@ -142,5 +176,6 @@ import colorDecider from "./ColorDecider.js";
 .filter:hover {
   translate: 0px -5px;
   box-shadow: 0px 0px 10px 2px rgb(129, 129, 129);
+  cursor: pointer;
 }
 </style>

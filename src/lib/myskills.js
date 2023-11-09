@@ -20,7 +20,7 @@ export const skillsData = [
   {
     skill_name: "Python",
     logo: "logos:python",
-    skill_type: ["language"],
+    skill_type: ["language", "backend-framework"],
     years_experienced: "2",
   },
   {
@@ -32,7 +32,7 @@ export const skillsData = [
   {
     skill_name: "TypeScript",
     logo: "logos:typescript-icon",
-    skill_type: ["langauge", "tool"],
+    skill_type: ["language", "tool"],
     years_experienced: "2",
   },
   {
@@ -99,7 +99,7 @@ export const skillsData = [
   {
     skill_name: "Figma",
     logo: "logos:figma",
-    skill_type: ["tool"],
+    skill_type: ["tool", "design"],
     years_experienced: "1",
   },
   {
@@ -123,31 +123,31 @@ export const skillsData = [
 export const filter = [
   {
     type: "language",
-    color: "",
+    color: "#AF1B3F",
   },
   {
     type: "frontend-framework",
-    color: "",
+    color: "#33658A",
   },
   {
     type: "backend-framework",
-    color: "",
+    color: "#80CFA9",
   },
   {
     type: "web",
-    color: "",
+    color: "#F26419",
   },
   {
     type: "mobile",
-    color: "",
+    color: "#758E4F",
   },
   {
     type: "tool",
-    color: "",
+    color: "#E7BB41",
   },
   {
     type: "other",
-    color: "",
+    color: "#EF959D",
   },
 ];
 
