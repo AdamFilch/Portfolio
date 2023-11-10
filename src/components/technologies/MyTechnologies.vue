@@ -68,8 +68,6 @@ export default {
         this.currentFilter = newFilter;
         this.filteredArray = techFilter(newFilter);
       }
-
-      console.log(this.filteredArray);
     },
   },
 };

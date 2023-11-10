@@ -93,7 +93,7 @@ export const skillsData = [
   {
     skill_name: "Obsidian",
     logo: "logos:obsidian-icon",
-    skill_type: ["tool"],
+    skill_type: ["tool", "other"],
     years_experienced: "1",
   },
   {
@@ -106,6 +106,12 @@ export const skillsData = [
     skill_name: "Git",
     logo: "logos:git-icon",
     skill_type: ["tool"],
+    years_experienced: "1",
+  },
+  {
+    skill_name: "ChatGPT",
+    logo: "logos:openai-icon",
+    skill_type: ["tool", "other"],
     years_experienced: "1",
   },
 ];

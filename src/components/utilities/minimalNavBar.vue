@@ -23,12 +23,12 @@ import { sections } from "../../lib/sections.js";
 // if the index == current point index it is true so therefore it is chosen
 
 const navLinkElmnts = ref([]);
-const sectionElmnts = document.querySelectorAll(".section");
+const sectionElmnts = ref([]);
 
 const currentSection = ref("home");
 
 const handleScroll = () => {
-  sectionElmnts.forEach((sectionEl) => {
+  sectionElmnts.value.forEach((sectionEl) => {
     if (window.scrollY + 300 >= sectionEl.offsetTop) {
       currentSection.value = sectionEl.id;
     }
@@ -41,11 +41,13 @@ const handleScroll = () => {
       navLinkEl.classList.remove("active");
     }
   });
-  console.log(currentSection.value);
 };
 
 onMounted(() => {
   navLinkElmnts.value = document.querySelectorAll(".navlink2");
+  sectionElmnts.value = document.querySelectorAll(".section");
+
+  handleScroll();
   window.addEventListener("scroll", handleScroll);
 });
 
@@ -90,8 +92,8 @@ onUnmounted(() => {
   border-radius: 100%;
   background-color: #ffffffa1;
   transition:
-    background-color 0.4s,
-    transform 0.4s;
+    background-color 0.3s,
+    transform 0.3s;
 }
 
 .navitem2:hover {
@@ -102,7 +104,8 @@ onUnmounted(() => {
   }
 }
 
-.navlink2.active {
+.active {
+  transition: background-color 0.3s;
   transform: scale(2);
   background-color: $dark-primary;
 }
