@@ -1,5 +1,5 @@
 <template>
-  <div id="home-nav">
+  <div id="about-nav" class="section">
     <div class="title-card">
       <h1 class="title">WHO I AM</h1>
       <box class="title-decor"></box>

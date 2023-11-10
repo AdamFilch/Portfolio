@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="timeline-nav" class="title-card">
+    <div id="timeline-nav" class="title-card section">
       <box class="title-decor-null"></box>
       <h1 class="title">WHERE I'VE BEEN</h1>
       <box class="title-decor"></box>

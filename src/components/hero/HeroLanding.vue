@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="hero section" id="home-nav">
     <div class="intro">
       <h1 class="hey-there">Hey there, <span style="color: #fff">✌️</span></h1>
 

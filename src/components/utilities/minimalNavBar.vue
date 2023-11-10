@@ -1,33 +1,5 @@
 <template>
   <nav class="navbar">
-    <!-- <ul class="navlist">
-      <li class="navitem" selected="true">
-        <a class="navlink"> <span class="tooltip">Test</span> </a>
-      </li>
-      <li class="navitem" selected="true">
-        <a class="navlink"> <span class="tooltip">Test</span> </a>
-      </li>
-      <li class="navitem" selected="true">
-        <a class="navlink"> <span class="tooltip">Test</span> </a>
-      </li>
-      <li class="navitem" selected="true">
-        <a class="navlink"> <span class="tooltip">Test</span> </a>
-      </li>
-      <li class="navitem" selected="true">
-        <a class="navlink"> <span class="tooltip">Test</span> </a>
-      </li>
-    </ul> -->
-    <!-- <ul class="navlist">
-      <li
-        class="navitem"
-        selected="true"
-        v-for="(section, index) in sections"
-        :key="index"
-      >
-        <a class="navlink" href="{section.sec_ref}"></a>
-        <span class="tooltip">{{ section.sec_name }}</span>
-      </li>
-    </ul> -->
     <ul class="navlist">
       <li
         class="navitem2"
@@ -43,43 +15,50 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { sections } from "../../lib/sections.js";
 
 // if current point index == current view scroll past
 // then return the index
 // if the index == current point index it is true so therefore it is chosen
-const selected = ref(0);
+
+const navLinkElmnts = ref([]);
+const sectionElmnts = document.querySelectorAll(".section");
+
+const currentSection = ref("home");
+
+const handleScroll = () => {
+  sectionElmnts.forEach((sectionEl) => {
+    if (window.scrollY + 300 >= sectionEl.offsetTop) {
+      currentSection.value = sectionEl.id;
+    }
+  });
+
+  navLinkElmnts.value.forEach((navLinkEl) => {
+    if (navLinkEl.href.includes(currentSection.value)) {
+      navLinkEl.classList.add("active");
+    } else {
+      navLinkEl.classList.remove("active");
+    }
+  });
+  console.log(currentSection.value);
+};
+
+onMounted(() => {
+  navLinkElmnts.value = document.querySelectorAll(".navlink2");
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  // Remove the scroll event listener when the component is unmounted
+  window.removeEventListener("scroll", handleScroll);
+});
+
+// const selected = ref(0);
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/shared.scss";
-.navlist {
-}
-.navlink {
-}
-
-.navitem {
-  margin: 20px;
-  list-style: none;
-  height: 7px;
-  border-radius: 30px;
-  aspect-ratio: 1;
-  background-color: #ffffffa1;
-  transition:
-    transform 0.3s,
-    display 0.3s,
-    opacity 0.3s;
-  position: relative;
-}
-
-.navitem:hover {
-  transform: scale(1.6);
-  .tooltip {
-    display: inline-block;
-    opacity: 1;
-  }
-}
 
 .tooltip {
   opacity: 0;
@@ -88,12 +67,10 @@ const selected = ref(0);
   left: 55px;
   top: 12px;
   transform: translate(-50%, -50%);
-  font-size: 10px;
+  font-size: 8px;
   width: 60px;
 }
 
-.navlist {
-}
 .navitem2 {
   list-style: none;
   height: 23px;
@@ -108,17 +85,25 @@ const selected = ref(0);
 }
 .navlink2 {
   margin: auto;
-  height: 7px;
+  height: 6px;
   aspect-ratio: 1;
   border-radius: 100%;
   background-color: #ffffffa1;
+  transition:
+    background-color 0.4s,
+    transform 0.4s;
 }
 
 .navitem2:hover {
-  transform: scale(1.6);
+  transform: scale(2);
   .tooltip {
     display: inline-block;
     opacity: 1;
   }
+}
+
+.navlink2.active {
+  transform: scale(2);
+  background-color: $dark-primary;
 }
 </style>
