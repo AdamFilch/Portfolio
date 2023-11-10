@@ -119,7 +119,6 @@ export default {
   flex-wrap: wrap;
   max-width: 900px;
   gap: 20px;
-  transition: all 0.5s linear;
 }
 .skill {
   font-size: 22px;
@@ -191,7 +190,7 @@ export default {
 .skills-enter-from,
 .skills-leave-to {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(-10px);
 }
 
 .skills-leave-active {

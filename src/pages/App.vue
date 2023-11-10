@@ -6,13 +6,14 @@ import MyTimeline from "../components/timeline/MyTimeline.vue";
 import MyTechnologies from "../components/technologies/MyTechnologies.vue";
 import ContactMe from "../components/contact-me/ContactMe.vue";
 import TinyFooter from "../components/footer/TinyFooter.vue";
+import MinimalNavBar from "../components/utilities/minimalNavBar.vue";
 </script>
 
 <template>
   <div class="app">
     <div class="theme-tog"></div>
     <div class="nav">
-      <FloatingNavBar />
+      <MinimalNavBar />
     </div>
     <div class="hero-landing">
       <HeroLanding />
@@ -39,8 +40,9 @@ import TinyFooter from "../components/footer/TinyFooter.vue";
 
 .nav {
   position: fixed;
-  top: 35%;
+  top: 50%;
   left: 3%;
+  transform: translate(-50%, -50%);
 }
 .hero-landing {
   height: 100vh;
