@@ -105,7 +105,6 @@ onUnmounted(() => {
 }
 
 .active {
-  transition: background-color 0.3s;
   transform: scale(2);
   background-color: $dark-primary;
 }

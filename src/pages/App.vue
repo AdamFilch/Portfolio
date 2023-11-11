@@ -41,12 +41,13 @@ import MinimalNavBar from "../components/utilities/minimalNavBar.vue";
 .nav {
   position: fixed;
   top: 50%;
-  left: 3%;
+  left: 2%;
   transform: translate(-50%, -50%);
 }
 .hero-landing {
   height: 100vh;
-  top: 0;
+}
+.body {
 }
 
 .footer {

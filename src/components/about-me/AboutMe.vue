@@ -26,8 +26,8 @@
           <p>
             Today, with my acquired knowledge I <span>build apps</span>,
             <span>teach and demonstrate</span>, occasionally take advantage of
-            opportunities in competitons, and enjoying the process of learning.
-            I aim continue to grow and eventually branch and
+            opportunities in competitons, and enjoy the process of learning. I
+            aim continue to grow and eventually branch and
             <span>lead a team of my own</span>.
           </p>
         </div>
@@ -79,8 +79,6 @@
 }
 
 .img-box:hover {
-  height: 400px;
-  width: 600px;
   background-color: #fff;
   translate: -5px -5px;
   box-shadow: 15px 15px 0px 1px rgb(129, 129, 129);
