@@ -118,6 +118,7 @@ export default {
   max-width: 900px;
   gap: 20px;
 }
+
 .skill {
   font-size: 22px;
   padding-left: 20px;

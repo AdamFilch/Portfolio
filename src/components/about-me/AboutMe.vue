@@ -6,8 +6,12 @@
     </div>
     <div class="about-me">
       <div class="image">
-        <div class="img-box"></div>
-        <img />
+        <img
+          src="../../../2959.JPEG"
+          width="100%"
+          height="auto"
+          class="img-box"
+        />
       </div>
       <div class="content">
         <div class="cnt-body">
@@ -59,33 +63,34 @@
   background-color: #ffffffa1;
 }
 .about-me {
-  height: 600px;
   font-size: 18px;
   color: #ffffffa1;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-auto-flow: column;
   gap: 50px;
   justify-content: center;
-  padding-top: 100px;
+  margin: 0 3em;
+}
+
+.image {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
 }
 
 .img-box {
-  height: 400px;
-  width: 600px;
-  background-color: #fff;
   transition:
     translate 0.4s,
     box-shadow 0.4s;
 }
 
 .img-box:hover {
-  background-color: #fff;
   translate: -5px -5px;
-  box-shadow: 15px 15px 0px 1px rgb(129, 129, 129);
+  box-shadow: 10px 10px 0px 1px rgb(129, 129, 129);
 }
 
 .content {
-  width: 550px;
+  max-width: 550px;
 }
 
 .cnt-body {

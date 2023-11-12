@@ -70,7 +70,14 @@
           </div>
         </div>
       </div>
-      <div class="img-box"></div>
+      <div class="image">
+        <img
+          src="../../../public/11519.JPEG"
+          width="100%"
+          height="auto"
+          class="img-box"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -109,16 +116,15 @@ import { Icon } from "@iconify/vue";
 .reach-out {
   font-size: 18px;
   color: #ffffffa1;
-  display: flex;
-  flex-direction: row;
-  gap: 70px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 50px;
   justify-content: center;
-  padding-top: 50px;
+  margin: 0 3em;
 }
 
 .reach-out-description {
-  width: 600px;
-  margin-top: 50px;
+  max-width: 600px;
 }
 .reach-out-description h1 {
   color: $dark-primary;
@@ -128,22 +134,27 @@ import { Icon } from "@iconify/vue";
   margin-top: 20px;
   margin-bottom: 30px;
 }
+.image {
+  max-width: 300px;
+  height: 300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
 
 .img-box {
-  height: 350px;
-  width: 300px;
-  background-color: #fff;
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+
   transition:
     translate 0.4s,
     box-shadow 0.4s;
 }
 
 .img-box:hover {
-  height: 350px;
-  width: 300px;
-  background-color: #fff;
   translate: -5px -5px;
-  box-shadow: 15px 15px 0px 1px rgb(129, 129, 129);
+  box-shadow: 10px 10px 0px 1px rgb(129, 129, 129);
 }
 
 .action-btns {
