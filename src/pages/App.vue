@@ -46,6 +46,10 @@ import MinimalNavBar from "../components/utilities/minimalNavBar.vue";
 }
 .hero-landing {
   height: 100vh;
+  justify-content: center;
+  display: grid;
+  align-items: center;
+  margin: 0 3em;
 }
 
 .footer {
