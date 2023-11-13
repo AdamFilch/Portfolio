@@ -105,12 +105,12 @@ export default {
 }
 
 .technologies {
-  margin-top: 90px;
-  justify-content: center;
-  display: flex;
+  margin: 3em 3em;
+  min-height: 300px;
 }
 
 .technology-collection {
+  margin: auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -137,7 +137,7 @@ export default {
 }
 
 .filter-section {
-  margin-top: 90px;
+  margin: 0 3em;
   justify-content: center;
 }
 

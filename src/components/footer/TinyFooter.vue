@@ -18,10 +18,11 @@
           <p>
             "Power is given to those who
             <span class="footer-highlight"
-              >dare<span class="footer-book-tooltip">
+              >dare
+              <!-- <span class="footer-book-tooltip">
                 Fyodor Dostoyevsky's, Crime and Punishment
-              </span></span
-            >
+              </span> -->
+            </span>
             to lower themselves to pick it up" //
           </p>
         </div>

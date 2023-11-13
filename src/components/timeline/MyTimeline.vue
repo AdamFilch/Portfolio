@@ -61,9 +61,11 @@ import TimelinePoint from "./timelinePoint.vue";
   display: flex;
   justify-content: center;
   margin-top: 60px;
+  margin: 0 3em;
 }
 
 .content {
+  padding: 0 6em;
   display: flex;
   flex-direction: column;
 }

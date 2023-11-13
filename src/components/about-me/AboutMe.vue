@@ -65,20 +65,23 @@
 .about-me {
   font-size: 18px;
   color: #ffffffa1;
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  flex-direction: row;
   gap: 50px;
   justify-content: center;
+  align-items: center;
   margin: 0 3em;
 }
 
 .image {
-  max-width: 600px;
+  max-width: 450px;
   display: flex;
   align-items: center;
 }
 
 .img-box {
+  object-fit: contain;
+  border: 4px solid #fff;
   transition:
     translate 0.4s,
     box-shadow 0.4s;
@@ -94,6 +97,7 @@
 }
 
 .cnt-body {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -111,5 +115,11 @@
   border-left: 0;
   border-right: 0;
   transition: border 0.1s;
+}
+
+@media (max-width: 850px) {
+  .about-me {
+    flex-direction: column;
+  }
 }
 </style>

@@ -111,12 +111,7 @@ import { Icon } from "@iconify/vue";
 }
 
 .hero {
-  width: 600px;
-  margin: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+  max-width: 600px;
 }
 
 .contacts ul {
