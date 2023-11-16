@@ -72,7 +72,7 @@
       </div>
       <div class="image">
         <img
-          src="../../../public/11519.JPEG"
+          src="../../../11519.JPEG"
           width="100%"
           height="auto"
           class="img-box"

@@ -1,12 +1,12 @@
 <script setup>
 import HeroLanding from "../components/hero/HeroLanding.vue";
-import FloatingNavBar from "../components/utilities/FloatingNavBar.vue";
 import AboutMe from "../components/about-me/AboutMe.vue";
 import MyTimeline from "../components/timeline/MyTimeline.vue";
 import MyTechnologies from "../components/technologies/MyTechnologies.vue";
 import ContactMe from "../components/contact-me/ContactMe.vue";
 import TinyFooter from "../components/footer/TinyFooter.vue";
 import MinimalNavBar from "../components/utilities/minimalNavBar.vue";
+import BackgroundElement from "../components/perlin-noise-bg/backgroundElement.vue";
 </script>
 
 <template>
@@ -14,6 +14,9 @@ import MinimalNavBar from "../components/utilities/minimalNavBar.vue";
     <div class="theme-tog"></div>
     <div class="nav">
       <MinimalNavBar />
+    </div>
+    <div class="lowkey">
+      <BackgroundElement />
     </div>
     <div class="hero-landing">
       <HeroLanding />
