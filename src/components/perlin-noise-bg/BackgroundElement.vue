@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bgelm">
     <div id="perlinnoise"></div>
   </div>
 </template>

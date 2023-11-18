@@ -7,6 +7,7 @@ import ContactMe from "../components/contact-me/ContactMe.vue";
 import TinyFooter from "../components/footer/TinyFooter.vue";
 import MinimalNavBar from "../components/utilities/minimalNavBar.vue";
 import BackgroundElement from "../components/perlin-noise-bg/backgroundElement.vue";
+import HeroSection from "../components/sections/HeroSection.vue";
 </script>
 
 <template>
@@ -15,12 +16,15 @@ import BackgroundElement from "../components/perlin-noise-bg/backgroundElement.v
     <div class="nav">
       <MinimalNavBar />
     </div>
-    <div class="lowkey">
+    <div>
+      <HeroSection />
+    </div>
+    <!-- <div class="lowkey">
       <BackgroundElement />
     </div>
     <div class="hero-landing">
       <HeroLanding />
-    </div>
+    </div> -->
 
     <div class="body">
       <AboutMe />

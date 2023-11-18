@@ -2,10 +2,11 @@
   <div class="hero section" id="home-nav">
     <div class="intro">
       <h1 class="hey-there">Hey there, <span style="color: #fff">✌️</span></h1>
-
-      <h2>I'm Adam Filchoir</h2>
-      <div>
-        <h2>A <span>Fullstack Developer.</span></h2>
+      <div class="me">
+        <h2>I'm Adam Filchoir</h2>
+        <div>
+          <h2>A <span>Fullstack Developer.</span></h2>
+        </div>
       </div>
 
       <p>
@@ -72,18 +73,29 @@ import { Icon } from "@iconify/vue";
 
 <style lang="scss" scoped>
 @import "../../assets/shared.scss";
+
+.hero {
+}
 .hey-there {
   color: $dark-primary;
 }
+
 .intro {
   margin-bottom: 14px;
 }
 .intro h1 {
   font-size: 20px;
   margin-bottom: 14px;
+  text-shadow:
+    -3px 3px 2px #121212,
+    -3px 3px 2px #121212;
 }
 .intro h2 {
-  font-size: 45px;
+  font-size: 54px;
+  line-height: 110%;
+  text-shadow:
+    -5px 5px 2px #121212,
+    -5px 4px 2px #121212;
 }
 
 .intro p {
@@ -92,6 +104,9 @@ import { Icon } from "@iconify/vue";
   color: #ffffffa1;
 
   margin-top: 25px;
+  text-shadow:
+    1x 0px 1px $dark-text-onbg,
+    1px 0px 1px $dark-text-onbg;
 }
 
 .get-to-know {
@@ -188,7 +203,7 @@ import { Icon } from "@iconify/vue";
 }
 
 .github-logo:hover {
-  color: rgb(139, 139, 139);
+  color: rgb(71, 71, 71);
   width: 49px;
   height: 49px;
 }
