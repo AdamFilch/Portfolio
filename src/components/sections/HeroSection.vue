@@ -2,11 +2,11 @@
   <div class="parallax">
     <!-- <div class="head-nav"></div> -->
 
-    <div class="perlin-noise">
-      <BackgroundElement />
+    <div class="background">
+      <!-- <BackgroundElement /> -->
     </div>
     <div class="main-text">
-      <HeroLanding />
+      <!-- <HeroLanding /> -->
     </div>
     <!-- <div class="foreground"></div>
     <div class="accessories"></div> -->

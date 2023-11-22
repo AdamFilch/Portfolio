@@ -122,4 +122,12 @@ export default {
 h1 {
   color: $dark-primary;
 }
+
+@media (max-width: 550px) {
+  .tl-line,
+  .point,
+  .year {
+    display: none;
+  }
+}
 </style>

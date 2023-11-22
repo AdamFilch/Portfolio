@@ -65,8 +65,19 @@ import TimelinePoint from "./timelinePoint.vue";
 }
 
 .content {
-  padding: 0 6em;
+  padding: 0;
+  padding-left: 2em;
+  padding-right: 6em;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 550px) {
+  .content {
+    padding: 0;
+  }
+  .timeline {
+    margin: 2em;
+  }
 }
 </style>

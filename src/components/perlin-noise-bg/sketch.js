@@ -67,6 +67,9 @@ function sketch(p) {
       particles[i].show();
     }
   };
+  p.windowResized = function () {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+  };
 }
 
 // const containerElmnt = document.getElementById("perlinnoise");

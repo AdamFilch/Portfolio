@@ -260,4 +260,17 @@ import { Icon } from "@iconify/vue";
     height 0.3s,
     width 0.3s;
 }
+
+@media (max-width: 630px) {
+  .img-box {
+    display: none;
+  }
+  .reach-out {
+    margin: 0 3em;
+    gap: 0px;
+  }
+}
+
+@media (max-width: 630px) {
+}
 </style>
