@@ -12,6 +12,7 @@
           class="skill"
           v-for="skill in filteredArray"
           :key="skill.skill_name"
+          :style="{ color: colorDecider(skill.skill_type) }"
         >
           {{ skill.skill_name }}
         </li>
@@ -27,6 +28,7 @@
             v-for="filter_item in filter"
             :key="filter_item.filter"
             @click="filterMe(filter_item.type)"
+            :style="{ borderColor: colorDecider(filter_item.type) }"
           >
             {{ filter_item.type }}
           </button>
@@ -38,14 +40,13 @@
 
 <script>
 import { skillsData, filter } from "../../lib/myskills.js";
-// import colorDecider from "./ColorDecider.js";
+import colorDecider from "./ColorDecider";
 import techFilter from "./TechFilter.js";
 // import { ref } from "vue";
 export default {
   data() {
     return {
       filterToggle: false,
-
       currentFilter: "",
       skillsData: skillsData,
       filteredArray: skillsData,
@@ -53,6 +54,10 @@ export default {
     };
   },
   methods: {
+    colorDecider(type) {
+      return colorDecider(type);
+    },
+
     filterMe(newFilter) {
       if (this.currentFilter === "") {
         this.filterToggle = !this.filterToggle; // make true if the filter toggle is off meaning no filter in active

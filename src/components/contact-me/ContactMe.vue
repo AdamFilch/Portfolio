@@ -261,7 +261,7 @@ import { Icon } from "@iconify/vue";
     width 0.3s;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 700px) {
   .img-box {
     display: none;
   }

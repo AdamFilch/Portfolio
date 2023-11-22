@@ -1,9 +1,10 @@
 <template>
   <div class="footer-section">
+    <!-- <span class="outer-slash">//</span> -->
     <div class="footer-body">
       <div class="copyright">
         <p>
-          // Made with
+          <span class="innerslash">//</span> Made with
           <span class="love footer-highlight"
             >Love
             <span class="lub">*lub*</span>
@@ -23,11 +24,13 @@
                 Fyodor Dostoyevsky's, Crime and Punishment
               </span> -->
             </span>
-            to lower themselves to pick it up" //
+            to lower themselves to pick it up"
+            <span class="inner-slash">//</span>
           </p>
         </div>
       </div>
     </div>
+    <!-- <span class="outer-slash">//</span> -->
   </div>
 </template>
 
@@ -52,7 +55,6 @@ export default {
 
 .footer-section {
   height: 50px;
-
   background-color: $dark-primary;
   margin-top: 80px;
   justify-content: center;
