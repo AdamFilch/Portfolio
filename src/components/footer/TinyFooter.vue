@@ -1,13 +1,12 @@
 <template>
   <div class="footer-section">
-    <!-- <span class="outer-slash">//</span> -->
+    <span class="outer-slash">//</span>
     <div class="footer-body">
       <div class="copyright">
         <p>
-          <span class="innerslash">//</span> Made with
+          Made with
           <span class="love footer-highlight"
-            >Love
-            <span class="lub">*lub*</span>
+            >Love<span class="lub">*lub*</span>
             <span class="dub">*dub*</span>
           </span>
           by Adam
@@ -19,18 +18,16 @@
           <p>
             "Power is given to those who
             <span class="footer-highlight"
-              >dare
-              <!-- <span class="footer-book-tooltip">
+              >dare<!-- <span class="footer-book-tooltip">
                 Fyodor Dostoyevsky's, Crime and Punishment
               </span> -->
             </span>
             to lower themselves to pick it up"
-            <span class="inner-slash">//</span>
           </p>
         </div>
       </div>
     </div>
-    <!-- <span class="outer-slash">//</span> -->
+    <span class="outer-slash">//</span>
   </div>
 </template>
 
@@ -54,9 +51,10 @@ export default {
 @import "../../assets/shared.scss";
 
 .footer-section {
-  height: 50px;
+  min-height: 50px;
   background-color: $dark-primary;
   margin-top: 80px;
+  padding: 10px 20px;
   justify-content: center;
   display: flex;
 }
@@ -78,6 +76,8 @@ export default {
 
 p {
   text-shadow: 0px 0px 5px #363434;
+  padding: 0px 10px;
+  text-align: center;
 }
 
 .footer-highlight:hover .footer-book-tooltip {
@@ -127,5 +127,21 @@ p {
 .love:hover .dub {
   display: block;
   opacity: 1;
+}
+
+.outer-slash {
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .footer-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .inner-slash {
+    display: none;
+  }
 }
 </style>
