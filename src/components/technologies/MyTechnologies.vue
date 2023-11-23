@@ -1,7 +1,6 @@
 <template>
   <div id="tech-nav" class="section">
     <div class="title-card">
-      <box class="title-decor-null"></box>
       <h1 class="title">WHAT I USE</h1>
       <box class="title-decor"></box>
     </div>
@@ -28,7 +27,7 @@
             v-for="filter_item in filter"
             :key="filter_item.filter"
             @click="filterMe(filter_item.type)"
-            :style="{ borderColor: colorDecider(filter_item.type) }"
+            :style="{ color: colorDecider(filter_item.type) }"
           >
             {{ filter_item.type }}
           </button>
@@ -79,38 +78,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/_shared.scss";
+
 .title-card {
-  justify-content: center;
+  justify-content: right;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 20px;
+  padding: 10px 0px;
   gap: 30px;
+  background-color: $dark-primary;
 }
 .title {
   font-size: 40px;
-  color: #ffffffa1;
   letter-spacing: 3px;
   min-width: 260px;
 }
 
 #tech-nav {
-  transition: all 0.5s linear;
+  color: $dark-text-onbg;
 }
 
 .title-decor {
   height: 3px;
   width: 50%;
-  background-color: #ffffffa1;
-}
-.title-decor-null {
-  height: 3px;
-  width: 50%;
-  background-color: #ffffff00;
+  background-color: $dark-text-onbg;
 }
 
 .technologies {
-  margin: 3em 3em;
+  margin: 4em 3em;
   min-height: 300px;
 }
 
@@ -125,15 +121,14 @@ export default {
 }
 
 .skill {
-  font-size: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: 20px;
+  padding: 8px 15px;
+
   list-style: none;
   border-style: solid;
   border-radius: 10px;
   transition: translate 0.2s;
+  background-color: $dark-text-onbg;
 }
 
 .skill:hover {
@@ -151,10 +146,11 @@ export default {
   display: flex;
   font-size: 20px;
   margin-bottom: 15px;
-  color: #75ee56bd;
+  color: $dark-primary;
 }
 
 .filters {
+  padding-bottom: 4em;
   justify-content: center;
   display: flex;
 }
@@ -170,14 +166,13 @@ export default {
 
 .filter {
   font-size: 18px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 8px 15px;
+
   background: transparent;
   border: 3px solid;
   border-radius: 10px;
   transition: translate 0.1s;
+  background-color: $dark-text-onbg;
 }
 
 .filter:hover {

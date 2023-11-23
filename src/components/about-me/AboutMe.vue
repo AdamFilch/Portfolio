@@ -43,24 +43,26 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+@import "../../assets/shared.scss";
 .title-card {
   justify-content: right;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 20px;
+  padding: 0.5em 0px;
   gap: 30px;
+  background-color: $dark-primary;
 }
 .title {
+  color: $dark-text-onbg;
   font-size: 40px;
-  color: #ffffffa1;
   letter-spacing: 3px;
 }
 
 .title-decor {
   height: 3px;
   width: 20%;
-  background-color: #ffffffa1;
+  background-color: $dark-primary-variant;
 }
 .about-me {
   font-size: 18px;
@@ -70,7 +72,7 @@
   gap: 50px;
   justify-content: center;
   align-items: center;
-  margin: 0 3em;
+  margin: 3em 3em;
 }
 
 .image {

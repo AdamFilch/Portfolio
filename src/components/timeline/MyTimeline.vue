@@ -1,7 +1,6 @@
 <template>
   <div>
     <div id="timeline-nav" class="title-card section">
-      <box class="title-decor-null"></box>
       <h1 class="title">WHERE I'VE BEEN</h1>
       <box class="title-decor"></box>
     </div>
@@ -32,11 +31,11 @@ import TimelinePoint from "./timelinePoint.vue";
 @import "../../assets/_shared.scss";
 
 .title-card {
-  justify-content: center;
+  justify-content: right;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 20px;
+  padding: 10px 0px;
   gap: 30px;
 }
 .title {
@@ -51,17 +50,12 @@ import TimelinePoint from "./timelinePoint.vue";
   width: 50%;
   background-color: #ffffffa1;
 }
-.title-decor-null {
-  height: 3px;
-  width: 50%;
-  background-color: #ffffff00;
-}
 
 .timeline {
   display: flex;
   justify-content: center;
   margin-top: 60px;
-  margin: 0 3em;
+  margin: 3em 3em;
 }
 
 .content {

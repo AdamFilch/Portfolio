@@ -60,6 +60,5 @@ import HeroSection from "../components/sections/HeroSection.vue";
 }
 
 .footer {
-  margin-top: 100px;
 }
 </style>

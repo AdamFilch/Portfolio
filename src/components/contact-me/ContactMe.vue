@@ -1,7 +1,6 @@
 <template>
   <div id="contact-nav" class="contact-me-section section">
     <div class="title-card">
-      <box class="title-decor-null"></box>
       <h1 class="title">CONTACT ME</h1>
       <box class="title-decor"></box>
     </div>
@@ -94,6 +93,7 @@ import { Icon } from "@iconify/vue";
   flex-direction: row;
   align-items: center;
   gap: 30px;
+  padding: 20px 0px;
 }
 .title {
   font-size: 40px;
@@ -107,11 +107,6 @@ import { Icon } from "@iconify/vue";
   width: 60%;
   background-color: #ffffffa1;
 }
-.title-decor-null {
-  height: 3px;
-  width: 10%;
-  background-color: #ffffff00;
-}
 
 .reach-out {
   font-size: 18px;
@@ -120,7 +115,7 @@ import { Icon } from "@iconify/vue";
   grid-auto-flow: column;
   gap: 50px;
   justify-content: center;
-  margin: 0 3em;
+  margin: 1em 3em;
 }
 
 .reach-out-description {
@@ -266,7 +261,7 @@ import { Icon } from "@iconify/vue";
     display: none;
   }
   .reach-out {
-    margin: 0 3em;
+    margin: 1em 3em;
     gap: 0px;
   }
 }
