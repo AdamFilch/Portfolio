@@ -94,17 +94,18 @@ import { Icon } from "@iconify/vue";
   align-items: center;
   gap: 30px;
   padding: 20px 0px;
+  padding-left: 30px;
 }
 .title {
-  font-size: 40px;
+  font-size: clamp(1.3rem, 3vw, 40px);
+
   color: #ffffffa1;
   letter-spacing: 3px;
-  min-width: 300px;
 }
 
 .title-decor {
   height: 3px;
-  width: 60%;
+  width: clamp(20%, 55%, 60%);
   background-color: #ffffffa1;
 }
 

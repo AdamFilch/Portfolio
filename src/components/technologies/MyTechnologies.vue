@@ -86,13 +86,13 @@ export default {
   flex-direction: row;
   align-items: center;
   padding: 10px 0px;
+  padding-left: 30px;
   gap: 30px;
   background-color: $dark-primary;
 }
 .title {
-  font-size: 40px;
+  font-size: clamp(1rem, 3vw, 40px);
   letter-spacing: 3px;
-  min-width: 260px;
 }
 
 #tech-nav {
@@ -101,7 +101,7 @@ export default {
 
 .title-decor {
   height: 3px;
-  width: 50%;
+  width: clamp(20%, 48%, 50%);
   background-color: $dark-text-onbg;
 }
 
@@ -122,7 +122,7 @@ export default {
 
 .skill {
   font-size: 20px;
-  padding: 8px 15px;
+  padding: 10px 20px;
 
   list-style: none;
   border-style: solid;
@@ -194,5 +194,18 @@ export default {
 
 .skills-leave-active {
   position: absolute;
+}
+@media (max-width: 550px) {
+  .skill {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .filter {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  .technology-collection {
+    gap: 10px;
+  }
 }
 </style>

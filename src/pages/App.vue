@@ -48,7 +48,7 @@ import HeroSection from "../components/sections/HeroSection.vue";
 .nav {
   position: fixed;
   top: 50%;
-  left: 2%;
+  left: 10px;
   transform: translate(-50%, -50%);
 }
 .hero-landing {

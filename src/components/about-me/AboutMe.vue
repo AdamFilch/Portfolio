@@ -49,13 +49,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.5em 0px;
+  padding: 10px 0px;
+  padding-left: 30px;
   gap: 30px;
   background-color: $dark-primary;
 }
 .title {
   color: $dark-text-onbg;
-  font-size: 40px;
+  font-size: clamp(1.3rem, 3vw, 40px);
   letter-spacing: 3px;
 }
 
@@ -96,6 +97,7 @@
 
 .content {
   max-width: 550px;
+  font-size: clamp(0.9rem, 3vw, 20px);
 }
 
 .cnt-body {

@@ -35,19 +35,19 @@ import TimelinePoint from "./timelinePoint.vue";
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 0;
+  padding-left: 30px;
   gap: 30px;
 }
 .title {
-  font-size: 40px;
+  font-size: clamp(1.3rem, 2.5vw, 40px);
   color: #ffffffa1;
   letter-spacing: 3px;
-  min-width: 365px;
 }
 
 .title-decor {
   height: 3px;
-  width: 50%;
+  width: 20vw;
   background-color: #ffffffa1;
 }
 
