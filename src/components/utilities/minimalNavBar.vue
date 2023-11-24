@@ -100,6 +100,7 @@ onUnmounted(() => {
   transform: scale(2);
   .tooltip {
     display: inline-block;
+
     opacity: 1;
   }
 }

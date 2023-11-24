@@ -73,7 +73,7 @@
   gap: 50px;
   justify-content: center;
   align-items: center;
-  margin: 3em 3em;
+  margin: 3em 2em;
 }
 
 .image {
@@ -84,7 +84,7 @@
 
 .img-box {
   object-fit: contain;
-  border: 4px solid #fff;
+  border: 4px solid $dark-primary-variant;
   transition:
     translate 0.4s,
     box-shadow 0.4s;
@@ -92,12 +92,12 @@
 
 .img-box:hover {
   translate: -5px -5px;
-  box-shadow: 10px 10px 0px 1px rgb(129, 129, 129);
+  box-shadow: 10px 10px 0px 1px $dark-accent;
 }
 
 .content {
   max-width: 550px;
-  font-size: clamp(0.9rem, 3vw, 20px);
+  font-size: clamp(0.8rem, 3vw, 18px);
 }
 
 .cnt-body {

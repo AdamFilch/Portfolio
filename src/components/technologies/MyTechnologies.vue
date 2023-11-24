@@ -106,8 +106,9 @@ export default {
 }
 
 .technologies {
-  margin: 4em 3em;
-  min-height: 300px;
+  margin: 2em 2em;
+  margin-top: 4em;
+  min-height: 280px;
 }
 
 .technology-collection {
@@ -122,7 +123,7 @@ export default {
 
 .skill {
   font-size: 20px;
-  padding: 10px 20px;
+  padding: 8px 18px;
 
   list-style: none;
   border-style: solid;
@@ -137,7 +138,7 @@ export default {
 }
 
 .filter-section {
-  margin: 0 3em;
+  margin: 0 2em;
   justify-content: center;
 }
 
@@ -147,10 +148,11 @@ export default {
   font-size: 20px;
   margin-bottom: 15px;
   color: $dark-primary;
+  text-decoration: underline 0.15em $dark-primary;
 }
 
 .filters {
-  padding-bottom: 4em;
+  margin-bottom: 4em;
   justify-content: center;
   display: flex;
 }
@@ -177,7 +179,7 @@ export default {
 
 .filter:hover {
   translate: 0px -5px;
-  box-shadow: 0px 0px 10px 2px rgb(129, 129, 129);
+  box-shadow: 0px 0px 10px 2px $dark-accent;
   cursor: pointer;
 }
 
@@ -200,9 +202,18 @@ export default {
     padding: 8px 14px;
     font-size: 13px;
   }
+
+  .skill:hover {
+    translate: 0px -5px;
+    box-shadow: 0px 0px 10px 2px rgb(129, 129, 129);
+  }
   .filter {
     padding: 6px 12px;
     font-size: 13px;
+  }
+  .filter:hover {
+    translate: 0px -5px;
+    box-shadow: 0px 0px 10px 2px rgb(129, 129, 129);
   }
   .technology-collection {
     gap: 10px;

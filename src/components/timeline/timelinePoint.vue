@@ -86,17 +86,18 @@ export default {
   border: 2px solid #fff;
   max-width: 600px;
   padding: 10px;
-  transition: translate 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 .body:hover {
-  translate: -10px 0px;
-  box-shadow: 0px 0px 10px 5px rgb(129, 129, 129);
+  transform: scale(1.01);
+  box-shadow: 0px 0px 8px 1px #fff;
 }
 
 .tl-line {
   height: 100%;
   width: 3px;
-  position: absolute;
   right: -57px;
   background-color: #ffffffa1;
   position: absolute;
@@ -115,19 +116,47 @@ export default {
 .skills {
   display: flex;
   column-gap: 20px;
-  color: $dark-primary;
-  opacity: 0.7;
+  color: $dark-accent;
+  opacity: 1;
 }
-
 h1 {
   color: $dark-primary;
 }
 
-@media (max-width: 550px) {
-  .tl-line,
-  .point,
-  .year {
+@media (max-width: 600px) {
+  .point {
     display: none;
+  }
+  .tl-line {
+    height: 80%;
+    width: 3px;
+    top: 55px;
+
+    right: -18px;
+    background-color: #ffffffa1;
+    position: absolute;
+  }
+  .year {
+    position: absolute;
+    right: -27px;
+    top: -2px;
+    width: 20px;
+    word-wrap: break-word;
+  }
+
+  h1 {
+    color: $dark-primary;
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4,
+  .skills {
+    font-size: 0.85em;
+  }
+  li {
+    font-size: 0.8em;
   }
 }
 </style>

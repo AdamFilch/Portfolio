@@ -47,7 +47,7 @@ import TimelinePoint from "./timelinePoint.vue";
 
 .title-decor {
   height: 3px;
-  width: 20vw;
+  width: clamp(20%, 40%, 50%);
   background-color: #ffffffa1;
 }
 
@@ -66,7 +66,7 @@ import TimelinePoint from "./timelinePoint.vue";
   flex-direction: column;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .content {
     padding: 0;
   }

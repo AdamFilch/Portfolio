@@ -70,12 +70,7 @@
         </div>
       </div>
       <div class="image">
-        <img
-          src="../../../11519.JPEG"
-          width="100%"
-          height="auto"
-          class="img-box"
-        />
+        <img src="../../../11519.JPEG" class="img-box" />
       </div>
     </div>
   </div>
@@ -105,7 +100,7 @@ import { Icon } from "@iconify/vue";
 
 .title-decor {
   height: 3px;
-  width: clamp(20%, 55%, 60%);
+  width: clamp(20%, 60%, 60%);
   background-color: #ffffffa1;
 }
 
@@ -132,7 +127,6 @@ import { Icon } from "@iconify/vue";
 }
 .image {
   max-width: 300px;
-  height: 300px;
   height: auto;
   display: flex;
   align-items: center;
@@ -140,9 +134,8 @@ import { Icon } from "@iconify/vue";
 
 .img-box {
   width: 100%;
-  height: 300px;
   object-fit: contain;
-
+  border: 4px solid $dark-primary-variant;
   transition:
     translate 0.4s,
     box-shadow 0.4s;
@@ -150,7 +143,7 @@ import { Icon } from "@iconify/vue";
 
 .img-box:hover {
   translate: -5px -5px;
-  box-shadow: 10px 10px 0px 1px rgb(129, 129, 129);
+  box-shadow: 10px 10px 0px 1px $dark-accent;
 }
 
 .action-btns {
@@ -267,6 +260,13 @@ import { Icon } from "@iconify/vue";
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 530px) {
+  h1 {
+  }
+  p {
+  }
+  .resume-btn,
+  .email-btn {
+  }
 }
 </style>
