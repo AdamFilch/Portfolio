@@ -91,7 +91,7 @@ export default {
     box-shadow 0.3s;
 }
 .body:hover {
-  transform: scale(1.01);
+  transform: scale(1.03);
   box-shadow: 0px 0px 8px 1px #fff;
 }
 
@@ -142,6 +142,10 @@ h1 {
     top: -2px;
     width: 20px;
     word-wrap: break-word;
+  }
+  .body:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 8px 1px #fff;
   }
 
   h1 {

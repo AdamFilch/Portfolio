@@ -260,13 +260,17 @@ import { Icon } from "@iconify/vue";
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 550px) {
   h1 {
+    font-size: clamp(1rem, 1.6em, 2em);
   }
   p {
+    font-size: clamp(0.4rem, 0.8em, 2em);
   }
   .resume-btn,
   .email-btn {
+    height: 40px;
+    width: 120px;
   }
 }
 </style>

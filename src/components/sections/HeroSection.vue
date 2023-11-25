@@ -3,10 +3,10 @@
     <!-- <div class="head-nav"></div> -->
 
     <div class="background">
-      <!-- <BackgroundElement /> -->
+      <BackgroundElement />
     </div>
     <div class="main-text">
-      <!-- <HeroLanding /> -->
+      <HeroLanding />
     </div>
     <!-- <div class="foreground"></div>
     <div class="accessories"></div> -->

@@ -25,7 +25,7 @@
         </li>
         <li>
           🔖
-          <span>I'm Reading <span>Four Thousand Weeks</span></span>
+          <span>I'm Reading <span>No Longer Human</span></span>
         </li>
         <!-- <li>👔 Reach out to me <a href id="ContactHere">Here</a>!</li>
         <li>📝 Download my CV <a href id="DownloadCV">Here</a>!</li> -->
@@ -91,7 +91,7 @@ import { Icon } from "@iconify/vue";
     -3px 3px 2px #121212;
 }
 .intro h2 {
-  font-size: 54px;
+  font-size: 52px;
   line-height: 110%;
   text-shadow:
     -5px 5px 2px #121212,
@@ -224,5 +224,35 @@ import { Icon } from "@iconify/vue";
     color 0.3s,
     height 0.3s,
     width 0.3s;
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 16px;
+  }
+  .intro h2 {
+    font-size: 40px;
+  }
+  .intro p {
+    font-size: 16px;
+  }
+  .contacts ul {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 550px) {
+  .intro h1 {
+    font-size: 14px;
+  }
+  .intro h2 {
+    font-size: 28px;
+  }
+  .intro p {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .contacts ul {
+    font-size: 13px;
+  }
 }
 </style>
