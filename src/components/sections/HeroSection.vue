@@ -4,6 +4,7 @@
 
     <div class="background">
       <BackgroundElement />
+      <div id="bgelm"></div>
     </div>
     <div class="main-text">
       <HeroLanding />
@@ -34,6 +35,9 @@ import BackgroundElement from "../perlin-noise-bg/backgroundElement.vue";
   display: grid;
   align-items: center;
   margin: 0 3em;
+}
+.background {
+  overflow: hidden;
 }
 
 @keyframes parallax {

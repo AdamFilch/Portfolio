@@ -10,31 +10,30 @@
       </div>
 
       <p>
-        A nerd with a knack for tech that likes building things online with the
+        A nerd with a knack for tech, I likes building things online with the
         help of open source tools and frameworks. Oh and, I also read, like, a
         lot. <a href="#home-nav" class="get-to-know">Get to know me</a> !
       </p>
     </div>
     <div class="contacts">
-      <ul>
-        <li>
-          🧑‍💻 <span>I'm <span>currently looking for work</span></span>
-        </li>
-        <li>
-          🌱 <span>I'm learning <span>VueJS</span></span>
-        </li>
-        <li>
-          🔖
-          <span>I'm Reading <span>No Longer Human</span></span>
-        </li>
-        <!-- <li>👔 Reach out to me <a href id="ContactHere">Here</a>!</li>
-        <li>📝 Download my CV <a href id="DownloadCV">Here</a>!</li> -->
-      </ul>
-      <div class="btns">
-        <!-- <div class="reachout-download">
-          <button class="btn">👔 Reach out to me</button>
-          <button class="btn">📝 Download my CV</button>
-        </div> -->
+      <imCurrently />
+      <!-- <div class="wrap-collapsible">
+        <ul>
+          <li>
+            🧑‍💻 <span>I'm <span>currently looking for work</span></span>
+          </li>
+          <li>
+            🌱 <span>I'm learning <span>VueJS</span></span>
+          </li>
+          <li>
+            🔖
+            <span>I'm Reading <span>No Longer Human</span></span>
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- <div class="btns">
+
         <div class="social-btns">
           <a
             href="https://www.linkedin.com/in/adamadamadam/"
@@ -54,28 +53,27 @@
               class="sbtns github-logo"
             />
           </a>
-          <!-- <a href="" class="social-btn" id="Instagram">
+          <a href="" class="social-btn" id="Instagram">
             <Icon
               icon="bxl:instagram"
               style="font-size: 35px"
               class="sbtns instagram-logo"
             />
-          </a> -->
+          </a> 
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script setup>
 import { Icon } from "@iconify/vue";
+import imCurrently from "./imCurrently.vue";
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/shared.scss";
 
-.hero {
-}
 .hey-there {
   color: $dark-primary;
 }
