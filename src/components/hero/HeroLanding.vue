@@ -12,63 +12,36 @@
       <p>
         A nerd with a knack for tech, I likes building things online with the
         help of open source tools and frameworks. Oh and, I also read, like, a
-        lot. <a href="#home-nav" class="get-to-know">Get to know me</a> !
+        lot.
+        <a href="#about-nav" class="get-to-know"> Get to know me </a>
+        !
       </p>
     </div>
-    <div class="contacts">
+    <div class="content">
       <imCurrently />
-      <!-- <div class="wrap-collapsible">
-        <ul>
-          <li>
-            🧑‍💻 <span>I'm <span>currently looking for work</span></span>
-          </li>
-          <li>
-            🌱 <span>I'm learning <span>VueJS</span></span>
-          </li>
-          <li>
-            🔖
-            <span>I'm Reading <span>No Longer Human</span></span>
-          </li>
-        </ul>
-      </div> -->
-
-      <!-- <div class="btns">
-
-        <div class="social-btns">
-          <a
-            href="https://www.linkedin.com/in/adamadamadam/"
-            class="social-btn"
-            id="LinkedIn "
-          >
-            <Icon
-              icon="bxl:linkedin-square"
-              style="font-size: 35px"
-              class="sbtns linkedin-logo"
-            />
-          </a>
-          <a href="https://github.com/AdamFilch" class="social-btn" id="GitHub">
-            <Icon
-              icon="bxl:github"
-              style="font-size: 35px"
-              class="sbtns github-logo"
-            />
-          </a>
-          <a href="" class="social-btn" id="Instagram">
-            <Icon
-              icon="bxl:instagram"
-              style="font-size: 35px"
-              class="sbtns instagram-logo"
-            />
-          </a> 
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
 
-<script setup>
-import { Icon } from "@iconify/vue";
+<script>
 import imCurrently from "./imCurrently.vue";
+
+export default {
+  methods: {
+    toggleCont() {
+      this.display = !this.display;
+    },
+  },
+  components: {
+    imCurrently,
+  },
+  data() {
+    return {
+      display: false,
+      windowWidth: window.innerWidth,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -99,7 +72,7 @@ import imCurrently from "./imCurrently.vue";
 .intro p {
   text-align: left;
   font-size: 18px;
-  color: #ffffffa1;
+  color: #ffffffac;
 
   margin-top: 25px;
   text-shadow:
@@ -108,6 +81,10 @@ import imCurrently from "./imCurrently.vue";
 }
 
 .get-to-know {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
   color: #ffffffa1;
   text-decoration: underline 0.15em rgba(236, 0, 0, 0);
   position: relative;
@@ -117,6 +94,7 @@ import imCurrently from "./imCurrently.vue";
     text-underline-offset 0.3s;
 }
 
+.active,
 .get-to-know:hover {
   color: $dark-primary;
   text-underline-offset: 8px;
@@ -127,14 +105,7 @@ import imCurrently from "./imCurrently.vue";
   max-width: 600px;
 }
 
-.contacts ul {
-  margin-left: 25px;
-
-  font-size: 1em;
-}
-
-.contacts ul span {
-  color: #ffffffa1;
+.content {
 }
 
 .reachout-download {
@@ -234,8 +205,9 @@ import imCurrently from "./imCurrently.vue";
   .intro p {
     font-size: 16px;
   }
-  .contacts ul {
-    font-size: 0.8em;
+
+  .get-to-know {
+    font-size: 18px;
   }
 }
 @media (max-width: 550px) {
@@ -249,8 +221,9 @@ import imCurrently from "./imCurrently.vue";
     margin-top: 10px;
     font-size: 13px;
   }
-  .contacts ul {
-    font-size: 13px;
+
+  .get-to-know {
+    font-size: 15px;
   }
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="wrap-collapsible">
-      <button>. . .</button>
       <ul class="im-curr">
         <li>
           🧑‍💻 <span>I'm <span>currently looking for work</span></span>
@@ -65,7 +64,7 @@ import { Icon } from "@iconify/vue";
 }
 
 .wrap-collapsible ul span {
-  color: #ffffffa1;
+  color: #ffffffac;
 }
 
 .btn {
@@ -140,24 +139,39 @@ import { Icon } from "@iconify/vue";
     width 0.3s;
 }
 
-.im-curr {
+.collapsebtn {
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+.active,
+.collapsebtn:hover {
+  background-color: #0a66c2;
+  border: none;
+}
+
+.content {
   display: none;
 }
 
 .btns {
   margin-top: 20px;
-  display: none;
   align-items: center;
 }
 
+li {
+  font-size: 1em;
+}
+
 @media (max-width: 768px) {
-  .contacts ul {
-    font-size: 0.8em;
+  li {
+    font-size: 14px;
   }
 }
 @media (max-width: 550px) {
-  .contacts ul {
-    font-size: 13px;
+  li {
+    font-size: 12px;
   }
 }
 </style>

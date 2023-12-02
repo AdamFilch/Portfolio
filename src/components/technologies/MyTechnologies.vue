@@ -109,6 +109,7 @@ export default {
   margin: 2em 2em;
   margin-top: 4em;
   min-height: 280px;
+  transition: min-height 0.5s ease-out;
 }
 
 .technology-collection {

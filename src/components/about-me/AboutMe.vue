@@ -73,7 +73,7 @@
   gap: 50px;
   justify-content: center;
   align-items: center;
-  margin: 3em 2em;
+  margin: 8em 2em;
 }
 
 .image {
@@ -124,6 +124,7 @@
 @media (max-width: 850px) {
   .about-me {
     flex-direction: column;
+    margin: 3em 2em;
   }
 }
 </style>
