@@ -73,7 +73,7 @@
   gap: 50px;
   justify-content: center;
   align-items: center;
-  margin: 8em 2em;
+  margin: 6em 2em;
 }
 
 .image {

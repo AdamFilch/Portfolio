@@ -111,6 +111,8 @@ import { Icon } from "@iconify/vue";
   grid-auto-flow: column;
   gap: 50px;
   justify-content: center;
+  align-items: center;
+
   margin: 1em 3em;
 }
 
