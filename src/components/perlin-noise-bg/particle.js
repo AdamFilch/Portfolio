@@ -1,4 +1,4 @@
-const PARTICLE_STROKE_ALPHA = 3;
+const PARTICLE_STROKE_ALPHA = 5;
 const PARTICLE_STROKE_WEIGHT = 1;
 const SPEED = 1;
 const PARTICLE_COLOR = 210;
@@ -9,6 +9,7 @@ export function Particle(p, scl, cols) {
   this.acc = p.createVector(0, 0);
   this.maxspeed = SPEED;
   this.prevPos = this.pos.copy();
+  // const winHei = p.windowHeight + 400;
 
   this.update = function () {
     this.vel.add(this.acc);

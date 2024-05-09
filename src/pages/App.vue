@@ -14,9 +14,8 @@ import HeroSection from "../components/sections/HeroSection.vue";
     <div class="nav">
       <MinimalNavBar />
     </div>
-    <div>
-      <HeroSection />
-    </div>
+
+    <HeroSection class="hero-para" />
     <!-- <div class="lowkey">
       <BackgroundElement />
     </div>
@@ -44,9 +43,10 @@ import HeroSection from "../components/sections/HeroSection.vue";
 }
 
 .nav {
+  z-index: 999;
   position: fixed;
   top: 50%;
-  left: 10px;
+  left: 20px;
   transform: translate(-50%, -50%);
 }
 .hero-landing {
@@ -55,6 +55,14 @@ import HeroSection from "../components/sections/HeroSection.vue";
   display: grid;
   align-items: center;
   margin: 0 3em;
+}
+.hero-para {
+  position: relative;
+  z-index: -1;
+}
+.body {
+  z-index: 0;
+  background-color: rgba(14, 26, 10, 1);
 }
 
 .footer {

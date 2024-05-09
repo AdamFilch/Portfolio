@@ -7,6 +7,7 @@ function sketch(p) {
   const scl = 15;
   let rows;
   let cols;
+  // const winHei = p.windowHeight + 400;
 
   let zoff = 0;
 

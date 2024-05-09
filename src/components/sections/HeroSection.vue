@@ -4,7 +4,6 @@
 
     <div class="background">
       <BackgroundElement />
-      <div id="bgelm"></div>
     </div>
     <div class="main-text">
       <HeroLanding />
@@ -27,9 +26,13 @@ import BackgroundElement from "../perlin-noise-bg/backgroundElement.vue";
 
 .parallax > * {
   grid-area: stack;
+  animation: parallax linear;
+  animation-timeline: scroll();
 }
 
 .main-text {
+  z-index: 2;
+  --parallax-speed: 11;
   height: 100vh;
   justify-content: center;
   display: grid;
@@ -37,11 +40,15 @@ import BackgroundElement from "../perlin-noise-bg/backgroundElement.vue";
   margin: 0 3em;
 }
 .background {
+  z-index: 1;
+  --parallax-speed: 6;
+
   overflow: hidden;
 }
 
 @keyframes parallax {
   to {
+    transform: translateY(calc(var(--parallax-speed) * 200px));
   }
 }
 </style>
