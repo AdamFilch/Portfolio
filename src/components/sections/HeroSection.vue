@@ -31,8 +31,8 @@ import BackgroundElement from "../perlin-noise-bg/backgroundElement.vue";
 }
 
 .main-text {
-  z-index: 2;
-  --parallax-speed: 11;
+  z-index: 5;
+  --parallax-speed: 10;
   height: 100vh;
   justify-content: center;
   display: grid;
@@ -41,7 +41,7 @@ import BackgroundElement from "../perlin-noise-bg/backgroundElement.vue";
 }
 .background {
   z-index: 1;
-  --parallax-speed: 6;
+  --parallax-speed: 14;
 
   overflow: hidden;
 }

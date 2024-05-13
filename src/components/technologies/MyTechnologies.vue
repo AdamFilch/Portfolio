@@ -130,7 +130,6 @@ export default {
   border-style: solid;
   border-radius: 10px;
   transition: translate 0.2s;
-  background-color: $dark-text-onbg;
 }
 
 .skill:hover {

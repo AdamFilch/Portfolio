@@ -6,6 +6,8 @@ import ContactMe from "../components/contact-me/ContactMe.vue";
 import TinyFooter from "../components/footer/TinyFooter.vue";
 import MinimalNavBar from "../components/utilities/minimalNavBar.vue";
 import HeroSection from "../components/sections/HeroSection.vue";
+
+// const observer = new IntersectionObserver((entries) => )
 </script>
 
 <template>
@@ -27,9 +29,9 @@ import HeroSection from "../components/sections/HeroSection.vue";
       <AboutMe />
       <MyTimeline />
       <MyTechnologies />
+      <ContactMe />
     </div>
     <div class="footer">
-      <ContactMe />
       <TinyFooter />
     </div>
   </div>
@@ -56,15 +58,18 @@ import HeroSection from "../components/sections/HeroSection.vue";
   align-items: center;
   margin: 0 3em;
 }
+
 .hero-para {
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 .body {
-  z-index: 0;
+  position: relative;
+  z-index: 999;
   background-color: rgba(14, 26, 10, 1);
 }
 
 .footer {
+  background-color: rgba(14, 26, 10, 1);
 }
 </style>

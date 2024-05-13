@@ -93,7 +93,6 @@ import { Icon } from "@iconify/vue";
 }
 .title {
   font-size: clamp(1.3rem, 3vw, 40px);
-
   color: #ffffffa1;
   letter-spacing: 3px;
 }
