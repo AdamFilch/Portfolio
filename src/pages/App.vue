@@ -1,11 +1,12 @@
 <script setup>
 import AboutMe from "../components/about-me/AboutMe.vue";
 import MyTimeline from "../components/timeline/MyTimeline.vue";
-import MyTechnologies from "../components/technologies/MyTechnologies.vue";
+// import MyTechnologies from "../components/technologies/MyTechnologies.vue";
 import ContactMe from "../components/contact-me/ContactMe.vue";
 import TinyFooter from "../components/footer/TinyFooter.vue";
 import MinimalNavBar from "../components/utilities/minimalNavBar.vue";
 import HeroSection from "../components/sections/HeroSection.vue";
+import TechSection from "../components/sections/TechSection.vue";
 
 // const observer = new IntersectionObserver((entries) => )
 </script>
@@ -28,7 +29,7 @@ import HeroSection from "../components/sections/HeroSection.vue";
     <div class="body">
       <AboutMe />
       <MyTimeline />
-      <MyTechnologies />
+      <TechSection />
       <ContactMe />
     </div>
     <div class="footer">
@@ -65,11 +66,12 @@ import HeroSection from "../components/sections/HeroSection.vue";
 }
 .body {
   position: relative;
-  z-index: 999;
+  z-index: 99;
   background-color: rgba(14, 26, 10, 1);
 }
 
 .footer {
-  background-color: rgba(14, 26, 10, 1);
+  background-color: #000;
+  // background-color: rgba(14, 26, 10, 1);
 }
 </style>

@@ -13,18 +13,16 @@
         </p>
       </div>
       <div class="sign-off">
-        <!-- <div></div> Some buttons in the right hand side of the footer -->
-        <div>
-          <p>
-            "Power is given to those who
-            <span class="footer-highlight"
-              >dare<!-- <span class="footer-book-tooltip">
-                Fyodor Dostoyevsky's, Crime and Punishment
-              </span> -->
-            </span>
-            to lower themselves to pick it up"
-          </p>
-        </div>
+        <p>
+          "Power is given to those who
+          <span class="tooltip-area" @mousemove="updateTooltipPosition">
+            dare
+            <!-- <span id="tooltip" role="tooltip" ref="tooltip">
+              Fyodor Dostoyevsky's, Crime and Punishment
+            </span> -->
+          </span>
+          to lower themselves to pick it up"
+        </p>
       </div>
     </div>
     <span class="outer-slash">//</span>
@@ -32,18 +30,42 @@
 </template>
 
 <script>
-// import DubDub from "./DubDub.vue";
-
 export default {
   // mounted() {
-  //   const tooltips = document.querySelectorAll(".footer-book-tooltip");
-  //   document.addEventListener("mousemove", (e) => {
-  //     tooltips.forEach((tooltip) => {
-  //       tooltip.style.left = e.pageX - 175 + "px";
-  //       tooltip.style.top = e.pageY - 55 + "px";
-  //     });
-  //   });
+  //   // Ensure the tooltip is available after the component is mounted
+  //   this.tooltip = this.$refs.tooltip;
   // },
+  // methods: {
+  //   updateTooltipPosition(event) {
+  //     if (!this.tooltip) return;
+
+  //     const tooltip = this.tooltip;
+  //     const tooltipArea = event.currentTarget;
+  //     const tooltipWidth = tooltip.offsetWidth;
+  //     const tooltipHeight = tooltip.offsetHeight;
+  //     const areaRect = tooltipArea.getBoundingClientRect();
+
+  //     // Calculate the position ensuring it stays within the tooltip area and viewport
+  //     let left = event.clientX - areaRect.left;
+  //     let top = event.clientY - areaRect.top;
+
+  //     if (left + tooltipWidth > areaRect.width) {
+  //       left = areaRect.width - tooltipWidth;
+  //     }
+
+  //     if (top + tooltipHeight > areaRect.height) {
+  //       top = areaRect.height - tooltipHeight;
+  //     }
+
+  //     tooltip.style.left = `${left}px`;
+  //     tooltip.style.top = `${top}px`;
+  //   },
+  // },
+  data() {
+    return {
+      tooltip: null,
+    };
+  },
 };
 </script>
 
@@ -67,38 +89,45 @@ export default {
   color: #efefef;
 }
 
-.footer-highlight {
-  color: #d11b1bfc;
-  letter-spacing: 1px;
-  font-weight: 700;
-  text-shadow: 0px 0px 10px #d86b6b;
-}
-
 p {
   text-shadow: 0px 0px 5px #363434;
   padding: 0px 10px;
   text-align: center;
 }
 
-.footer-highlight:hover .footer-book-tooltip {
-  display: block;
+.tooltip-area:hover #tooltip {
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
 }
 
-.footer-book-tooltip {
-  border-radius: 15px;
+.tooltip-area {
+  color: #d11b1bfc;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0px 0px 10px #d86b6b;
+  position: relative;
+}
+
+#tooltip {
   opacity: 0;
-  font-size: 14px;
-  padding: 5px;
   position: absolute;
+  font-size: 14px;
   text-shadow: 0px 0px 10px 10px #000000;
+
   color: hotpink;
-  transition: opacity 0.3s ease-in;
-  transition: opacity 0.15s ease-out;
+  transition: opacity 0.2s ease-in-out 0.3s;
+
+  pointer-events: none;
+  width: max-content;
+
+  top: -40px;
+  left: -120px;
 }
 
 .love {
+  color: #d11b1bfc;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0px 0px 10px #d86b6b;
   position: relative;
 }
 
@@ -142,6 +171,9 @@ p {
   }
   .inner-slash {
     display: none;
+  }
+  #tooltip {
+    top: -70px;
   }
 }
 </style>

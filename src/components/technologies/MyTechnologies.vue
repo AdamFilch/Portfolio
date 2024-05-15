@@ -13,7 +13,8 @@
           :key="skill.skill_name"
           :style="{ color: colorDecider(skill.skill_type) }"
         >
-          {{ skill.skill_name }}
+          <!-- {{ skill.skill_name }} -->
+          <Icon :icon="skill.logo" />
         </li>
       </transition-group>
     </div>
@@ -34,6 +35,10 @@
         </ul>
       </div>
     </div>
+
+    <div class="grid-tech">
+      <NewTech />
+    </div>
   </div>
 </template>
 
@@ -41,8 +46,12 @@
 import { skillsData, filter } from "../../lib/myskills.js";
 import colorDecider from "./ColorDecider";
 import techFilter from "./TechFilter.js";
+import NewTech from "./NewTech.vue";
+import { Icon } from "@iconify/vue";
+
 // import { ref } from "vue";
 export default {
+  components: { NewTech, Icon },
   data() {
     return {
       filterToggle: false,
@@ -196,6 +205,11 @@ export default {
 
 .skills-leave-active {
   position: absolute;
+}
+
+.grid-tech {
+  justify-content: center;
+  display: flex;
 }
 @media (max-width: 550px) {
   .skill {
