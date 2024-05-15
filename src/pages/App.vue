@@ -66,6 +66,7 @@ import TechSection from "../components/sections/TechSection.vue";
 }
 .body {
   position: relative;
+
   z-index: 99;
   background-color: rgba(14, 26, 10, 1);
 }

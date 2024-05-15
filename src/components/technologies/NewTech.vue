@@ -2,13 +2,13 @@
   <div class="main-grid">
     <li
       class="skill tooltip-area"
-      v-for="skill in skillsData2"
+      v-for="(skill, index) in skillsData2"
       :key="skill.skill_name"
-      v-on:mousemove="updateTooltipPosition"
+      @mousemove="updateTooltipPosition($event, index)"
     >
       <!-- {{ skill.logo }} -->
       <Icon :icon="skill.logo" class="logo" />
-      <div ref="tooltip" id="tooltip" role="tooltip" style="left: 0; top: 0">
+      <div id="tooltip" role="tooltip" :ref="'tooltip' + index">
         <div>{{ skill.skill_name }}</div>
         <div>{{ skill.skill_type }}</div>
         <div>{{ skill.years_experienced }} Years Experienced</div>
@@ -26,22 +26,33 @@ export default {
   data() {
     return {
       skillsData2,
-      tooltip: null,
+      tooltips: [],
     };
   },
   mounted() {
-    this.tooltip = this.$refs.tooltip;
+    this.tooltips = this.skillsData2.map(
+      (skill, index) => this.$refs[`tooltip${index}`],
+    );
   },
 
   methods: {
-    updateTooltipPosition(event) {
-      const tooltip = this.tooltip;
-      const style = tooltip.style;
-      if (!this.tooltip) return; // Ensure tooltip reference is available
-      if (window.innerHeight > this.tooltip.offsetHeight + event.clientY) {
-        style.top = `${event.clientY}px`;
+    updateTooltipPosition(event, index) {
+      const tooltip = this.tooltips[index];
+      // console.log(tooltip[0].style);
+      // Ensure tooltip reference is available
+      // if (window.innerHeight > tooltip[0].offsetHeight + event.clientY) {
+
+      // }
+      const leftStart = event.clientX - tooltip[0].offsetWidth / 2;
+      tooltip[0].style.top = `${event.pageY - window.innerHeight}px`;
+      if (leftStart < 10) {
+        // console.log("LOLISDOFSLFJ");
+        const maxWid = 200 + leftStart;
+        tooltip[0].style.maxWidth = `${maxWid}px`;
+        tooltip[0].style.left = `${leftStart - leftStart}px`;
+      } else {
+        tooltip[0].style.left = `${leftStart}px`;
       }
-      style.left = `${event.clientX}px`;
     },
   },
 };
@@ -71,11 +82,17 @@ export default {
 
 #tooltip {
   position: absolute;
-  height: fit-content;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   color: red;
+  transition: opacity ease-in-out 0.2s;
+  display: flex;
 
+  box-sizing: content-box;
+  margin: 0 10px;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  text-align: center;
   top: 0;
   left: 0;
 }

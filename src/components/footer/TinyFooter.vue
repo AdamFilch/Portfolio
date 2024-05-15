@@ -15,11 +15,11 @@
       <div class="sign-off">
         <p>
           "Power is given to those who
-          <span class="tooltip-area" @mousemove="updateTooltipPosition">
+          <span class="tooltip-area" @mousemove="updateTooltipPosition($event)">
             dare
-            <!-- <span id="tooltip" role="tooltip" ref="tooltip">
+            <span id="tooltip" role="tooltip" ref="tooltip">
               Fyodor Dostoyevsky's, Crime and Punishment
-            </span> -->
+            </span>
           </span>
           to lower themselves to pick it up"
         </p>
@@ -31,36 +31,19 @@
 
 <script>
 export default {
-  // mounted() {
-  //   // Ensure the tooltip is available after the component is mounted
-  //   this.tooltip = this.$refs.tooltip;
-  // },
-  // methods: {
-  //   updateTooltipPosition(event) {
-  //     if (!this.tooltip) return;
-
-  //     const tooltip = this.tooltip;
-  //     const tooltipArea = event.currentTarget;
-  //     const tooltipWidth = tooltip.offsetWidth;
-  //     const tooltipHeight = tooltip.offsetHeight;
-  //     const areaRect = tooltipArea.getBoundingClientRect();
-
-  //     // Calculate the position ensuring it stays within the tooltip area and viewport
-  //     let left = event.clientX - areaRect.left;
-  //     let top = event.clientY - areaRect.top;
-
-  //     if (left + tooltipWidth > areaRect.width) {
-  //       left = areaRect.width - tooltipWidth;
-  //     }
-
-  //     if (top + tooltipHeight > areaRect.height) {
-  //       top = areaRect.height - tooltipHeight;
-  //     }
-
-  //     tooltip.style.left = `${left}px`;
-  //     tooltip.style.top = `${top}px`;
-  //   },
-  // },
+  mounted() {
+    // Ensure the tooltip is available after the component is mounted
+    this.tooltip = this.$refs.tooltip;
+  },
+  methods: {
+    updateTooltipPosition(event) {
+      // Ensure tooltip reference is available
+      if (window.innerHeight > this.tooltip.offsetHeight + event.clientY) {
+        this.tooltip.style.top = `${event.pageY - 60}px`;
+      }
+      this.tooltip.style.left = `${event.pageX - 160}px`;
+    },
+  },
   data() {
     return {
       tooltip: null,
@@ -104,23 +87,22 @@ p {
   letter-spacing: 1px;
   font-weight: 700;
   text-shadow: 0px 0px 10px #d86b6b;
-  position: relative;
 }
 
 #tooltip {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   font-size: 14px;
   text-shadow: 0px 0px 10px 10px #000000;
-
+  display: flex;
+  overflow-wrap: break-word;
   color: hotpink;
   transition: opacity 0.2s ease-in-out 0.3s;
 
   pointer-events: none;
-  width: max-content;
 
-  top: -40px;
-  left: -120px;
+  top: 0;
+  left: 0;
 }
 
 .love {
@@ -171,9 +153,6 @@ p {
   }
   .inner-slash {
     display: none;
-  }
-  #tooltip {
-    top: -70px;
   }
 }
 </style>
