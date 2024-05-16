@@ -12,7 +12,7 @@ import TechSection from "../components/sections/TechSection.vue";
 </script>
 
 <template>
-  <div class="app">
+  <div class="app section" id="#top">
     <div class="theme-tog"></div>
     <div class="nav">
       <MinimalNavBar />
@@ -66,6 +66,7 @@ import TechSection from "../components/sections/TechSection.vue";
 }
 .body {
   position: relative;
+  overflow: hidden;
 
   z-index: 99;
   background-color: rgba(14, 26, 10, 1);

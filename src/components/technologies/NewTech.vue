@@ -38,29 +38,29 @@ export default {
   methods: {
     updateTooltipPosition(event, index) {
       const tooltip = this.tooltips[index];
-      // console.log(tooltip[0].style);
       // Ensure tooltip reference is available
-      // if (window.innerHeight > tooltip[0].offsetHeight + event.clientY) {
-
-      // }
+      if (window.innerHeight > tooltip[0].offsetHeight + event.clientY) {
+        tooltip[0].style.top = `${event.pageY - window.innerHeight + 10}px`;
+      }
       const leftStart = event.clientX - tooltip[0].offsetWidth / 2;
-      tooltip[0].style.top = `${event.pageY - window.innerHeight}px`;
-      if (leftStart < 10) {
+
+      if (leftStart < 15) {
         // console.log("LOLISDOFSLFJ");
-        const maxWid = 200 + leftStart;
+        const maxWid = 210 + leftStart;
         tooltip[0].style.maxWidth = `${maxWid}px`;
         tooltip[0].style.left = `${leftStart - leftStart}px`;
       } else {
-        tooltip[0].style.left = `${leftStart}px`;
+        tooltip[0].style.left = `${leftStart - 5}px`;
       }
     },
   },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/shared.scss";
 .main-grid {
-  margin: 0 15px;
+  margin: 0 25px;
 
   display: grid;
   grid-template-columns: repeat(4, minmax(40px, 200px));
@@ -78,29 +78,36 @@ export default {
 .tooltip-area {
   width: 50%;
   aspect-ratio: 1;
+  text-align: center;
 }
 
 #tooltip {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  color: red;
-  transition: opacity ease-in-out 0.2s;
-  display: flex;
-
-  box-sizing: content-box;
+  color: #000;
+  background-color: $dark-accent;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: opacity ease-in-out 0.3s;
+  height: fit-content;
   margin: 0 10px;
-  flex-direction: column;
-  overflow-wrap: break-word;
-  text-align: center;
+
   top: 0;
   left: 0;
 }
 
 .tooltip-area:hover #tooltip {
   opacity: 1;
+  z-index: 99;
+  overflow: hidden;
+}
+.tooltip-area:hover .logo {
+  filter: saturate(100%);
 }
 .logo {
+  transition: filter ease-in-out 0.3s;
+  filter: saturate(10%);
   font-size: 70px;
 }
 

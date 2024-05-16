@@ -90,12 +90,13 @@ p {
 }
 
 #tooltip {
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   font-size: 14px;
   text-shadow: 0px 0px 10px 10px #000000;
   display: flex;
   overflow-wrap: break-word;
+  overflow: hidden;
   color: hotpink;
   transition: opacity 0.2s ease-in-out 0.3s;
 

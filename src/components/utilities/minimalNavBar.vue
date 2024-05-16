@@ -25,11 +25,11 @@ import { sections } from "../../lib/sections.js";
 const navLinkElmnts = ref([]);
 const sectionElmnts = ref([]);
 
-const currentSection = ref("home");
+const currentSection = ref("#");
 
 const handleScroll = () => {
   sectionElmnts.value.forEach((sectionEl) => {
-    if (window.scrollY + 300 >= sectionEl.offsetTop) {
+    if (window.scrollY - 200 >= sectionEl.offsetTop) {
       currentSection.value = sectionEl.id;
     }
   });

@@ -9,7 +9,7 @@
 export const sections = [
   {
     sec_name: "Home",
-    sec_ref: "#home-nav",
+    sec_ref: "#top",
   },
   {
     sec_name: "About Me",
